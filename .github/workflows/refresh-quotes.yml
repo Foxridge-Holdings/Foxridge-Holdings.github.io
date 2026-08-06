@@ -9,6 +9,7 @@ on:
       - "data/holdings.csv"
       - "data/monitored.csv"
       - "scripts/refresh.mjs"
+      - "js/config.js"
       - "js/session.js"
       - ".github/workflows/refresh-quotes.yml"
 

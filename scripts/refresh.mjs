@@ -4,21 +4,36 @@
 // data/holdings.csv plus data/monitored.csv, fetches every unique symbol in a
 // single Yahoo Finance batch call via RapidAPI, and writes data/snapshot.json.
 //
-// Secrets:
-//   RAPIDAPI_KEY  (GitHub Secret)
+// Configuration:
+//   RAPIDAPI_KEY  (optional GitHub Secret override)
+//
+// When the repository secret is not configured, the job uses the same public
+// browser key as the site. This keeps scheduled refreshes working while still
+// allowing a private key to take precedence in GitHub Actions.
 //
 // Node 20+ — uses built-in fetch.
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { dirname } from "node:path";
+import {
+  RAPIDAPI_HOST,
+  RAPIDAPI_KEY as PUBLIC_RAPIDAPI_KEY,
+} from "../js/config.js";
 import { pickSession } from "../js/session.js";
 
-const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY;
-const RAPIDAPI_HOST = "apidojo-yahoo-finance-v1.p.rapidapi.com";
+const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY?.trim() || PUBLIC_RAPIDAPI_KEY;
 
 if (!RAPIDAPI_KEY) {
-  console.error("Missing RAPIDAPI_KEY env var");
+  console.error(
+    "No RapidAPI key configured. Add the RAPIDAPI_KEY repository secret or set RAPIDAPI_KEY in js/config.js.",
+  );
   process.exit(1);
+}
+
+if (!process.env.RAPIDAPI_KEY?.trim()) {
+  console.warn(
+    "RAPIDAPI_KEY repository secret is not set; using the public browser key from js/config.js.",
+  );
 }
 
 // Native currency → Yahoo FX symbol + multiplier. Mirrors js/fx.js so the

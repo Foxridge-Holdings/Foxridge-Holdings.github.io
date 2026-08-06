@@ -31,9 +31,8 @@ people visit:
 
 Required for the auto-refresh to work after you clone or fork:
 
-1. **Add GitHub Actions Secrets** (Repo → Settings → Secrets and variables → Actions → New repository secret):
-   - `RAPIDAPI_KEY`     — your RapidAPI key
-2. **Allow Actions to write** (Repo → Settings → Actions → General → Workflow permissions): set to "Read and write permissions". Already required to commit the snapshot file back.
+1. **Allow Actions to write** (Repo → Settings → Actions → General → Workflow permissions): set to "Read and write permissions". This is required to commit the snapshot file back.
+2. **Optional:** Add `RAPIDAPI_KEY` under Repo → Settings → Secrets and variables → Actions → New repository secret to override the public browser key in `js/config.js`.
 3. The workflow at [.github/workflows/refresh-quotes.yml](.github/workflows/refresh-quotes.yml) runs on:
    - cron `0 */3 * * *` (every 3 hours)
    - any push that touches `data/holdings.csv` or `data/monitored.csv`
@@ -53,8 +52,9 @@ deduplicates their symbols, makes one shared quote request, and writes
 
 Browser-side keys live in [js/config.js](js/config.js) — visible in source, but
 both providers explicitly support browser usage of free-tier keys, and rate
-limiting is the protection. Server-side, the same keys are read from GitHub
-Actions Secrets so they're not exposed in the workflow file.
+limiting is the protection. The scheduled refresh uses the `RAPIDAPI_KEY`
+GitHub Actions secret when configured and otherwise falls back to that public
+browser key.
 
 ## Updating holdings
 
@@ -151,8 +151,10 @@ python -m http.server 8000
 To regenerate the snapshot locally:
 
 ```bash
-RAPIDAPI_KEY=... node scripts/refresh.mjs
+node scripts/refresh.mjs
 ```
+
+Set `RAPIDAPI_KEY=...` to override the public browser key for a local run.
 
 ## Deploying
 
