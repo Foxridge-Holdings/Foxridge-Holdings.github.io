@@ -1,0 +1,14 @@
+symbol,buy_threshold,currency,market,note,link
+POOL,180,USD,US,Sample monitored stock,https://au.finance.yahoo.com/quote/POOL/
+VITL,9.5,USD,US,,https://au.finance.yahoo.com/quote/VITL/
+AER,125,USD,US,,https://au.finance.yahoo.com/quote/AER/
+AIR,105,USD,US,,https://au.finance.yahoo.com/quote/AIR/
+LULU,110,USD,US,,https://au.finance.yahoo.com/quote/LULU/
+NIKE,38,USD,US,,https://au.finance.yahoo.com/quote/NIKE/
+HSY,160,USD,US,,https://au.finance.yahoo.com/quote/HSY/
+UPS,95,USD,US,,https://au.finance.yahoo.com/quote/UPS/
+FTAI,160,USD,US,,https://au.finance.yahoo.com/quote/FTAI/
+NVO,40,USD,US,,https://au.finance.yahoo.com/quote/NVO/
+BABA,100,USD,US,,https://au.finance.yahoo.com/quote/BABA/
+UNH,350,USD,US,,https://au.finance.yahoo.com/quote/UNH/
+6634.TWO,50,TWD,Taiwan,,https://au.finance.yahoo.com/quote/6634.TWO/

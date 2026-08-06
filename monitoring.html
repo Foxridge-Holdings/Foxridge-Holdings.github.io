@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Monitoring — Foxridge Holdings</title>
+    <link rel="icon" type="image/png" href="assets/foxridge-holdings-logo.png" />
+    <link rel="apple-touch-icon" href="assets/foxridge-holdings-logo.png" />
+    <script src="js/theme.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="nav">
+        <a class="brand" href="./">
+          <span class="dot"></span>
+          <span>Foxridge Holdings</span>
+          <img class="brand-icon" src="assets/foxridge-holdings-logo.png" alt="" />
+        </a>
+        <div class="actions">
+          <a class="btn page-switch" href="./">Portfolio</a>
+          <span id="updated-at" class="updated-at" title=""></span>
+          <button class="btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="true" title="Switch to dark mode">
+            <span class="theme-toggle-icon" data-theme-icon aria-hidden="true">☾</span>
+            <span class="sr-only" data-theme-label>Switch to dark mode</span>
+          </button>
+          <button id="refresh" class="btn" title="Force-refresh monitored prices from the live API">
+            <span id="refresh-icon">↻</span>
+            <span>Refresh</span>
+          </button>
+          <button id="parse" class="btn" title="Manually parse monitored prices from Yahoo Finance">
+            <span id="parse-icon">⚡</span>
+            <span>Parse Data</span>
+          </button>
+        </div>
+      </header>
+
+      <div id="banner" class="banner" hidden></div>
+
+      <section class="summary monitor-summary">
+        <div class="label">Research watchlist</div>
+        <div id="monitor-count" class="value skeleton">0 stocks</div>
+        <div class="changes">
+          <div class="ch-row">
+            <span id="buy-zone-count" class="up">—</span>
+            <span class="tag">buy zone</span>
+          </div>
+          <div class="ch-row">
+            <span id="watch-count" class="watch-text">—</span>
+            <span class="tag">monitoring</span>
+          </div>
+          <div class="ch-row">
+            <span id="unavailable-count" class="muted">—</span>
+            <span class="tag">unavailable</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-header monitor-section-header">
+        <h2>Monitored stocks</h2>
+        <span class="muted">Closest to threshold first</span>
+      </div>
+
+      <div class="monitor-columns" aria-hidden="true">
+        <span>Stock</span>
+        <span>Current share price</span>
+        <span>Research buy threshold</span>
+        <span>Position versus threshold</span>
+      </div>
+      <div id="monitored" class="monitored-list"></div>
+      <div id="empty" class="empty" hidden>No monitored stocks found in data/monitored.csv.</div>
+    </div>
+
+    <script type="module" src="js/monitoring.js"></script>
+  </body>
+</html>

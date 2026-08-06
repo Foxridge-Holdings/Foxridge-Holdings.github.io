@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Foxridge Holdings</title>
+    <link rel="icon" type="image/png" href="assets/foxridge-holdings-logo.png" />
+    <link rel="apple-touch-icon" href="assets/foxridge-holdings-logo.png" />
+    <script src="js/theme.js"></script>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="nav">
+        <a class="brand" href="./">
+          <span class="dot"></span>
+          <span>Foxridge Holdings</span>
+          <img class="brand-icon" src="assets/foxridge-holdings-logo.png" alt="" />
+        </a>
+        <div class="actions">
+          <a class="btn page-switch" href="monitoring.html">Monitoring</a>
+          <span id="updated-at" class="updated-at" title=""></span>
+          <button class="btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="true" title="Switch to dark mode">
+            <span class="theme-toggle-icon" data-theme-icon aria-hidden="true">☾</span>
+            <span class="sr-only" data-theme-label>Switch to dark mode</span>
+          </button>
+          <button id="refresh" class="btn" title="Force-refresh from live API (consumes quota)">
+            <span id="refresh-icon">↻</span>
+            <span>Refresh</span>
+          </button>
+          <button id="parse" class="btn" title="Manually parse quotes from Yahoo Finance (no API quota used)">
+            <span id="parse-icon">⚡</span>
+            <span>Parse Data</span>
+          </button>
+        </div>
+      </header>
+
+      <div id="banner" class="banner" hidden></div>
+
+      <section class="summary">
+        <div class="label">Portfolio value</div>
+        <div id="total-value" class="value skeleton">$0.00</div>
+        <div class="changes">
+          <div class="ch-row">
+            <span id="day-change" class="neutral">—</span>
+            <span class="tag">today</span>
+          </div>
+          <div class="ch-row">
+            <span id="total-change" class="neutral">—</span>
+            <span class="tag">all time</span>
+          </div>
+          <div class="ch-row">
+            <span id="cost-basis" class="muted">—</span>
+            <span class="tag">cost basis</span>
+          </div>
+        </div>
+      </section>
+
+      <div id="tabs" class="tabs"></div>
+
+      <div class="filter-bar">
+        <label class="country-filter" for="country-filter">
+          <span>Country</span>
+          <select id="country-filter" aria-label="Filter holdings by country">
+            <option value="All">All countries</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="section-header">
+        <h2 id="holdings-title">
+          <span>Holdings</span>
+          <span class="caret" aria-hidden="true">▾</span>
+        </h2>
+        <div class="sort" id="sort">
+          <button data-sort="value" class="active">Value</button>
+          <button data-sort="change">% Change</button>
+          <button data-sort="symbol">Symbol</button>
+        </div>
+      </div>
+
+      <section id="overview" class="section overview" hidden></section>
+      <div id="holdings" class="holdings"></div>
+      <div id="empty" class="empty" hidden>No holdings found in data/holdings.csv.</div>
+    </div>
+
+    <script type="module" src="js/portfolio.js"></script>
+  </body>
+</html>
