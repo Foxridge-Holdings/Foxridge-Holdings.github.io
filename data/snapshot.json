@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T06:46:04.026Z",
+  "updatedAt": "2026-08-08T09:34:46.126Z",
   "quotes": {
     "BRK-B": {
       "c": 521.8,
@@ -82,7 +82,7 @@
       "fiftyTwoWeekLow": 4.08,
       "volume": 48273982,
       "averageVolume": 106260780,
-      "marketCap": null,
+      "marketCap": 52252516352,
       "peTTM": 66.85714,
       "eps": 0.14,
       "divYield": 0.014846235,
@@ -127,8 +127,8 @@
       "volume": 632709,
       "averageVolume": 991935,
       "marketCap": 7497459712,
-      "peTTM": 18.453487,
-      "eps": 11.18,
+      "peTTM": 18.944902,
+      "eps": 10.89,
       "divYield": 0.025114384,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -447,7 +447,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": null,
+      "marketCap": 52252516352,
       "ipo": null,
       "ticker": null
     },
@@ -691,13 +691,13 @@
       "averageVolume": 377780
     },
     "POOL": {
-      "peTTM": 18.453487,
+      "peTTM": 18.944902,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 336.15,
       "fiftyTwoWeekLow": 172.68,
       "divYield": 2.5114384,
       "beta": null,
-      "eps": 11.18,
+      "eps": 10.89,
       "volume": 632709,
       "averageVolume": 991935
     },
