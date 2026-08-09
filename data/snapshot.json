@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09T15:27:54.847Z",
+  "updatedAt": "2026-08-09T18:36:15.056Z",
   "quotes": {
     "BRK-B": {
       "c": 521.8,
@@ -36,29 +36,29 @@
       "exchange": "Taipei Exchange",
       "fiftyTwoWeekHigh": 287,
       "fiftyTwoWeekLow": 118,
-      "volume": 16184074,
+      "volume": 16205956,
       "averageVolume": 9517094,
       "marketCap": 14194987008,
       "peTTM": 67.02786,
       "eps": 3.23,
       "divYield": 0.011441648,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "LWLG": {
       "c": 8.11,
       "d": 0.52,
-      "dp": 6.85111,
+      "dp": 6.8511205,
       "o": 7.85,
       "h": 8.22,
       "l": 7.77,
-      "pc": 7.59,
+      "pc": 7.5899997,
       "currency": "USD",
       "name": "Lightwave Logic, Inc.",
       "exchange": "NasdaqCM",
       "fiftyTwoWeekHigh": 18.71,
       "fiftyTwoWeekLow": 1.99,
-      "volume": 2917838,
+      "volume": 2934259,
       "averageVolume": 5316790,
       "marketCap": 1249585792,
       "peTTM": null,
@@ -113,8 +113,8 @@
     },
     "POOL": {
       "c": 206.31,
-      "d": 5.23,
-      "dp": 2.60095,
+      "d": 5.2299957,
+      "dp": 2.6009526,
       "o": 201.81,
       "h": 209.65,
       "l": 200.95,
@@ -124,7 +124,7 @@
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 336.15,
       "fiftyTwoWeekLow": 172.68,
-      "volume": 632709,
+      "volume": 658537,
       "averageVolume": 991935,
       "marketCap": 7497459712,
       "peTTM": 18.944902,
@@ -135,8 +135,8 @@
     },
     "VITL": {
       "c": 12.24,
-      "d": -0.27,
-      "dp": -2.15828,
+      "d": -0.27000046,
+      "dp": -2.158277,
       "o": 12.87,
       "h": 12.88,
       "l": 11.965,
@@ -146,7 +146,7 @@
       "exchange": "NasdaqGM",
       "fiftyTwoWeekHigh": 53.125,
       "fiftyTwoWeekLow": 7.95,
-      "volume": 2737668,
+      "volume": 2738032,
       "averageVolume": 2403301,
       "marketCap": 525481792,
       "peTTM": null,
@@ -201,8 +201,8 @@
     },
     "LULU": {
       "c": 128.58,
-      "d": 3.85,
-      "dp": 3.08667,
+      "d": 3.8499985,
+      "dp": 3.0866659,
       "o": 124.54,
       "h": 128.85,
       "l": 124,
@@ -212,7 +212,7 @@
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 225.98,
       "fiftyTwoWeekLow": 104.44,
-      "volume": 2756210,
+      "volume": 2792143,
       "averageVolume": 3457040,
       "marketCap": 14600763392,
       "peTTM": 10.419773,
@@ -289,23 +289,23 @@
     },
     "FTAI": {
       "c": 216.24,
-      "d": -4.98999,
-      "dp": -2.25557,
+      "d": -4.9900055,
+      "dp": -2.2555735,
       "o": 225,
       "h": 225.152,
       "l": 214.33,
-      "pc": 221.23,
+      "pc": 221.23001,
       "currency": "USD",
       "name": "FTAI Aviation Ltd.",
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 323.51,
       "fiftyTwoWeekLow": 135.03,
-      "volume": 1283011,
+      "volume": 1334415,
       "averageVolume": 1317300,
       "marketCap": 22209380352,
       "peTTM": 47.213974,
       "eps": 4.58,
-      "divYield": 0.007684311,
+      "divYield": 0.0076843104,
       "marketState": "CLOSED",
       "extendedLabel": null
     },
@@ -394,7 +394,7 @@
       "peTTM": null,
       "eps": -1.74,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     }
   },
@@ -654,7 +654,7 @@
       "divYield": 1.1441648,
       "beta": null,
       "eps": 3.23,
-      "volume": 16184074,
+      "volume": 16205956,
       "averageVolume": 9517094
     },
     "LWLG": {
@@ -665,7 +665,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.16,
-      "volume": 2917838,
+      "volume": 2934259,
       "averageVolume": 5316790
     },
     "NOK": {
@@ -698,7 +698,7 @@
       "divYield": 2.5114384,
       "beta": null,
       "eps": 10.89,
-      "volume": 632709,
+      "volume": 658537,
       "averageVolume": 991935
     },
     "VITL": {
@@ -709,7 +709,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.05,
-      "volume": 2737668,
+      "volume": 2738032,
       "averageVolume": 2403301
     },
     "AER": {
@@ -742,7 +742,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 12.34,
-      "volume": 2756210,
+      "volume": 2792143,
       "averageVolume": 3457040
     },
     "NKE": {
@@ -783,10 +783,10 @@
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 323.51,
       "fiftyTwoWeekLow": 135.03,
-      "divYield": 0.7684311,
+      "divYield": 0.76843104,
       "beta": null,
       "eps": 4.58,
-      "volume": 1283011,
+      "volume": 1334415,
       "averageVolume": 1317300
     },
     "NVO": {
