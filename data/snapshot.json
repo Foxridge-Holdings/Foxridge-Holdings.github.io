@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09T09:35:54.102Z",
+  "updatedAt": "2026-08-09T12:43:13.284Z",
   "quotes": {
     "BRK-B": {
       "c": 521.8,
@@ -82,7 +82,7 @@
       "fiftyTwoWeekLow": 4.08,
       "volume": 48273982,
       "averageVolume": 106260780,
-      "marketCap": 52252516352,
+      "marketCap": null,
       "peTTM": 66.85714,
       "eps": 0.14,
       "divYield": 0.014846235,
@@ -447,7 +447,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 52252516352,
+      "marketCap": null,
       "ipo": null,
       "ticker": null
     },
