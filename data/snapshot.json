@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-10T04:27:30.725Z",
+  "updatedAt": "2026-08-10T06:26:15.623Z",
   "quotes": {
     "BRK-B": {
       "c": 521.8,
@@ -36,13 +36,13 @@
       "exchange": "Taipei Exchange",
       "fiftyTwoWeekHigh": 287,
       "fiftyTwoWeekLow": 118,
-      "volume": 2638052,
+      "volume": 2754423,
       "averageVolume": 9517094,
       "marketCap": 15604651008,
       "peTTM": 73.68421,
       "eps": 3.23,
       "divYield": 0.011547344,
-      "marketState": "REGULAR",
+      "marketState": "POSTPOST",
       "extendedLabel": null
     },
     "LWLG": {
@@ -376,9 +376,9 @@
       "extendedLabel": null
     },
     "6634.TWO": {
-      "c": 59.5,
-      "d": -2.5999985,
-      "dp": -4.1867933,
+      "c": 59.7,
+      "d": -2.3999977,
+      "dp": -3.8647308,
       "o": 62.1,
       "h": 62.1,
       "l": 58.6,
@@ -388,13 +388,13 @@
       "exchange": "Taipei Exchange",
       "fiftyTwoWeekHigh": 85,
       "fiftyTwoWeekLow": 29.05,
-      "volume": 57578,
+      "volume": 73174,
       "averageVolume": 233120,
-      "marketCap": 4241691136,
+      "marketCap": 4255949056,
       "peTTM": null,
       "eps": -1.74,
       "divYield": 0,
-      "marketState": "REGULAR",
+      "marketState": "POSTPOST",
       "extendedLabel": null
     }
   },
@@ -629,7 +629,7 @@
       "exchange": "Taipei Exchange",
       "weburl": null,
       "currency": "TWD",
-      "marketCap": 4241691136,
+      "marketCap": 4255949056,
       "ipo": null,
       "ticker": null
     }
@@ -654,7 +654,7 @@
       "divYield": 1.1547344,
       "beta": null,
       "eps": 3.23,
-      "volume": 2638052,
+      "volume": 2754423,
       "averageVolume": 9517094
     },
     "LWLG": {
@@ -830,12 +830,12 @@
       "divYield": 0,
       "beta": null,
       "eps": -1.74,
-      "volume": 57578,
+      "volume": 73174,
       "averageVolume": 233120
     }
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.0310559
+    "TWD": 0.031058796
   }
 }
