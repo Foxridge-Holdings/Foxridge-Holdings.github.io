@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09T21:28:46.984Z",
+  "updatedAt": "2026-08-10T01:26:57.298Z",
   "quotes": {
     "BRK-B": {
       "c": 521.8,
@@ -24,25 +24,25 @@
       "extendedLabel": null
     },
     "4931.TWO": {
-      "c": 216.5,
-      "d": -2,
-      "dp": -0.9153318,
-      "o": 217,
-      "h": 233,
-      "l": 213,
-      "pc": 218.5,
+      "c": 238,
+      "d": 21.5,
+      "dp": 9.930716,
+      "o": 231.5,
+      "h": 238,
+      "l": 230.5,
+      "pc": 216.5,
       "currency": "TWD",
       "name": "STL TECHNOLOGY CO LTD",
       "exchange": "Taipei Exchange",
       "fiftyTwoWeekHigh": 287,
       "fiftyTwoWeekLow": 118,
-      "volume": 16205956,
+      "volume": 1995000,
       "averageVolume": 9517094,
-      "marketCap": 14194987008,
-      "peTTM": 67.02786,
+      "marketCap": 15604651008,
+      "peTTM": 73.68421,
       "eps": 3.23,
-      "divYield": 0.011441648,
-      "marketState": "PREPRE",
+      "divYield": 0.011547344,
+      "marketState": "REGULAR",
       "extendedLabel": null
     },
     "LWLG": {
@@ -82,7 +82,7 @@
       "fiftyTwoWeekLow": 4.08,
       "volume": 48273982,
       "averageVolume": 106260780,
-      "marketCap": null,
+      "marketCap": 52252516352,
       "peTTM": 66.85714,
       "eps": 0.14,
       "divYield": 0.014846235,
@@ -377,24 +377,24 @@
     },
     "6634.TWO": {
       "c": 62.1,
-      "d": 3.3999977,
-      "dp": 5.7921596,
-      "o": 58.8,
+      "d": 0,
+      "dp": 0,
+      "o": 62.1,
       "h": 62.1,
-      "l": 58.8,
-      "pc": 58.7,
+      "l": 62.1,
+      "pc": 62.1,
       "currency": "TWD",
       "name": "SINEW",
       "exchange": "Taipei Exchange",
       "fiftyTwoWeekHigh": 85,
       "fiftyTwoWeekLow": 29.05,
-      "volume": 122332,
+      "volume": 470,
       "averageVolume": 233120,
       "marketCap": 4427042304,
       "peTTM": null,
       "eps": -1.74,
       "divYield": 0,
-      "marketState": "PREPRE",
+      "marketState": "REGULAR",
       "extendedLabel": null
     }
   },
@@ -421,7 +421,7 @@
       "exchange": "Taipei Exchange",
       "weburl": null,
       "currency": "TWD",
-      "marketCap": 14194987008,
+      "marketCap": 15604651008,
       "ipo": null,
       "ticker": null
     },
@@ -447,7 +447,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": null,
+      "marketCap": 52252516352,
       "ipo": null,
       "ticker": null
     },
@@ -647,14 +647,14 @@
       "averageVolume": 4818824
     },
     "4931.TWO": {
-      "peTTM": 67.02786,
+      "peTTM": 73.68421,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 287,
       "fiftyTwoWeekLow": 118,
-      "divYield": 1.1441648,
+      "divYield": 1.1547344,
       "beta": null,
       "eps": 3.23,
-      "volume": 16205956,
+      "volume": 1995000,
       "averageVolume": 9517094
     },
     "LWLG": {
@@ -830,12 +830,12 @@
       "divYield": 0,
       "beta": null,
       "eps": -1.74,
-      "volume": 122332,
+      "volume": 470,
       "averageVolume": 233120
     }
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.03102218
+    "TWD": 0.031004868
   }
 }
