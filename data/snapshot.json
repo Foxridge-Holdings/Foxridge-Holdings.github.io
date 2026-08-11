@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-11T04:17:01.267Z",
+  "updatedAt": "2026-08-11T07:01:47.671Z",
   "quotes": {
     "BRK-B": {
       "c": 529.42,
@@ -24,9 +24,9 @@
       "extendedLabel": null
     },
     "4931.TWO": {
-      "c": 252,
-      "d": 14,
-      "dp": 5.870021,
+      "c": 255,
+      "d": 17,
+      "dp": 7.1428576,
       "o": 239.5,
       "h": 261,
       "l": 239,
@@ -36,13 +36,13 @@
       "exchange": "Taipei Exchange",
       "fiftyTwoWeekHigh": 287,
       "fiftyTwoWeekLow": 118,
-      "volume": 17796574,
+      "volume": 21481032,
       "averageVolume": 9314272,
-      "marketCap": 16522571776,
-      "peTTM": 78.50467,
+      "marketCap": 16719268864,
+      "peTTM": 79.439255,
       "eps": 3.21,
       "divYield": 0.010504202,
-      "marketState": "REGULAR",
+      "marketState": "POSTPOST",
       "extendedLabel": null
     },
     "LWLG": {
@@ -215,8 +215,8 @@
       "volume": 2129076,
       "averageVolume": 3430322,
       "marketCap": 14512191488,
-      "peTTM": 10.3565645,
-      "eps": 12.34,
+      "peTTM": 10.4156475,
+      "eps": 12.27,
       "divYield": 0,
       "marketState": "PREPRE",
       "extendedLabel": null
@@ -325,8 +325,8 @@
       "volume": 9317860,
       "averageVolume": 12510795,
       "marketCap": 209112301568,
-      "peTTM": 11.785185,
-      "eps": 4.05,
+      "peTTM": 11.669926,
+      "eps": 4.09,
       "divYield": 0.24756666,
       "marketState": "PREPRE",
       "extendedLabel": null
@@ -376,9 +376,9 @@
       "extendedLabel": null
     },
     "6634.TWO": {
-      "c": 56.7,
-      "d": -3,
-      "dp": -5.084746,
+      "c": 57,
+      "d": -2.7000008,
+      "dp": -4.522614,
       "o": 59.7,
       "h": 59.7,
       "l": 55,
@@ -388,13 +388,13 @@
       "exchange": "Taipei Exchange",
       "fiftyTwoWeekHigh": 85,
       "fiftyTwoWeekLow": 29.05,
-      "volume": 112312,
+      "volume": 127637,
       "averageVolume": 225665,
-      "marketCap": 4042082304,
+      "marketCap": 4063468800,
       "peTTM": null,
       "eps": -1.74,
       "divYield": 0,
-      "marketState": "REGULAR",
+      "marketState": "POSTPOST",
       "extendedLabel": null
     }
   },
@@ -421,7 +421,7 @@
       "exchange": "Taipei Exchange",
       "weburl": null,
       "currency": "TWD",
-      "marketCap": 16522571776,
+      "marketCap": 16719268864,
       "ipo": null,
       "ticker": null
     },
@@ -629,7 +629,7 @@
       "exchange": "Taipei Exchange",
       "weburl": null,
       "currency": "TWD",
-      "marketCap": 4042082304,
+      "marketCap": 4063468800,
       "ipo": null,
       "ticker": null
     }
@@ -647,14 +647,14 @@
       "averageVolume": 4847996
     },
     "4931.TWO": {
-      "peTTM": 78.50467,
+      "peTTM": 79.439255,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 287,
       "fiftyTwoWeekLow": 118,
       "divYield": 1.0504202,
       "beta": null,
       "eps": 3.21,
-      "volume": 17796574,
+      "volume": 21481032,
       "averageVolume": 9314272
     },
     "LWLG": {
@@ -735,13 +735,13 @@
       "averageVolume": 448514
     },
     "LULU": {
-      "peTTM": 10.3565645,
+      "peTTM": 10.4156475,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 225.98,
       "fiftyTwoWeekLow": 104.44,
       "divYield": 0,
       "beta": null,
-      "eps": 12.34,
+      "eps": 12.27,
       "volume": 2129076,
       "averageVolume": 3430322
     },
@@ -790,13 +790,13 @@
       "averageVolume": 1310609
     },
     "NVO": {
-      "peTTM": 11.785185,
+      "peTTM": 11.669926,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 64.16,
       "fiftyTwoWeekLow": 35.12,
       "divYield": 24.756666,
       "beta": null,
-      "eps": 4.05,
+      "eps": 4.09,
       "volume": 9317860,
       "averageVolume": 12510795
     },
@@ -830,12 +830,12 @@
       "divYield": 0,
       "beta": null,
       "eps": -1.74,
-      "volume": 112312,
+      "volume": 127637,
       "averageVolume": 225665
     }
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031028919
+    "TWD": 0.03100679
   }
 }
