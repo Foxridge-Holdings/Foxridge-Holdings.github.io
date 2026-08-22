@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T06:34:45.275Z",
+  "updatedAt": "2026-08-22T09:23:39.618Z",
   "quotes": {
     "BRK-B": {
       "c": 495.82,
@@ -17,8 +17,8 @@
       "volume": 4620603,
       "averageVolume": 4793664,
       "marketCap": 1061406703616,
-      "peTTM": 12.473459,
-      "eps": 39.75,
+      "peTTM": 12.498614,
+      "eps": 39.67,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -636,13 +636,13 @@
   },
   "metrics": {
     "BRK-B": {
-      "peTTM": 12.473459,
+      "peTTM": 12.498614,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 537.74,
       "fiftyTwoWeekLow": 464.01,
       "divYield": 0,
       "beta": null,
-      "eps": 39.75,
+      "eps": 39.67,
       "volume": 4620603,
       "averageVolume": 4793664
     },
