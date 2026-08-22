@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T09:23:39.618Z",
+  "updatedAt": "2026-08-22T12:32:16.939Z",
   "quotes": {
     "BRK-B": {
       "c": 495.82,
@@ -17,8 +17,8 @@
       "volume": 4620603,
       "averageVolume": 4793664,
       "marketCap": 1061406703616,
-      "peTTM": 12.498614,
-      "eps": 39.67,
+      "peTTM": 12.470323,
+      "eps": 39.76,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -82,7 +82,7 @@
       "fiftyTwoWeekLow": 4.23,
       "volume": 44724264,
       "averageVolume": 101999201,
-      "marketCap": null,
+      "marketCap": 56997675008,
       "peTTM": 72.92857,
       "eps": 0.14,
       "divYield": 0.013793104,
@@ -124,11 +124,11 @@
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 336.15,
       "fiftyTwoWeekLow": 172.68,
-      "volume": 496265,
+      "volume": 495023,
       "averageVolume": 937201,
       "marketCap": 6831333888,
-      "peTTM": 17.486511,
-      "eps": 10.75,
+      "peTTM": 17.277573,
+      "eps": 10.88,
       "divYield": 0.026532864,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -171,8 +171,8 @@
       "volume": 804967,
       "averageVolume": 1148456,
       "marketCap": 22994456576,
-      "peTTM": 7.21351,
-      "eps": 20.28,
+      "peTTM": 7.1886973,
+      "eps": 20.35,
       "divYield": 0.010014307,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -189,12 +189,12 @@
       "name": "AAR Corp.",
       "exchange": "NYSE",
       "fiftyTwoWeekHigh": 154,
-      "fiftyTwoWeekLow": 72,
+      "fiftyTwoWeekLow": 73.05,
       "volume": 461036,
-      "averageVolume": 456022,
+      "averageVolume": 460535,
       "marketCap": 5427697152,
-      "peTTM": 27.236366,
-      "eps": 4.95,
+      "peTTM": 27.79794,
+      "eps": 4.85,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -235,10 +235,10 @@
       "fiftyTwoWeekHigh": 80.17,
       "fiftyTwoWeekLow": 38.86,
       "volume": 11727607,
-      "averageVolume": 24142388,
-      "marketCap": 60467404800,
-      "peTTM": 19.136148,
-      "eps": 2.13,
+      "averageVolume": 24291377,
+      "marketCap": 60360953856,
+      "peTTM": 19.409523,
+      "eps": 2.1,
       "divYield": 0.040537182,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -259,8 +259,8 @@
       "volume": 719751,
       "averageVolume": 1897619,
       "marketCap": 37464600576,
-      "peTTM": 25.718622,
-      "eps": 7.25,
+      "peTTM": 25.437927,
+      "eps": 7.33,
       "divYield": 0.029971855,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -299,12 +299,12 @@
       "name": "FTAI Aviation Ltd.",
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 323.51,
-      "fiftyTwoWeekLow": 144.975,
+      "fiftyTwoWeekLow": 145.5,
       "volume": 903641,
-      "averageVolume": 1323285,
+      "averageVolume": 1318643,
       "marketCap": 21537675264,
-      "peTTM": 43.326443,
-      "eps": 4.84,
+      "peTTM": 45.88621,
+      "eps": 4.57,
       "divYield": 0.008594106,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -347,8 +347,8 @@
       "volume": 32356925,
       "averageVolume": 12320103,
       "marketCap": 286042914816,
-      "peTTM": 29.612902,
-      "eps": 4.03,
+      "peTTM": 26.999998,
+      "eps": 4.42,
       "divYield": 0.0554815,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -369,8 +369,8 @@
       "volume": 4878587,
       "averageVolume": 5850480,
       "marketCap": 350160715776,
-      "peTTM": 24.753172,
-      "eps": 15.76,
+      "peTTM": 25.055235,
+      "eps": 15.57,
       "divYield": 0.023255814,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -447,7 +447,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": null,
+      "marketCap": 56997675008,
       "ipo": null,
       "ticker": null
     },
@@ -538,7 +538,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 60467404800,
+      "marketCap": 60360953856,
       "ipo": null,
       "ticker": null
     },
@@ -636,13 +636,13 @@
   },
   "metrics": {
     "BRK-B": {
-      "peTTM": 12.498614,
+      "peTTM": 12.470323,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 537.74,
       "fiftyTwoWeekLow": 464.01,
       "divYield": 0,
       "beta": null,
-      "eps": 39.67,
+      "eps": 39.76,
       "volume": 4620603,
       "averageVolume": 4793664
     },
@@ -691,14 +691,14 @@
       "averageVolume": 342138
     },
     "POOL": {
-      "peTTM": 17.486511,
+      "peTTM": 17.277573,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 336.15,
       "fiftyTwoWeekLow": 172.68,
       "divYield": 2.6532864,
       "beta": null,
-      "eps": 10.75,
-      "volume": 496265,
+      "eps": 10.88,
+      "volume": 495023,
       "averageVolume": 937201
     },
     "VITL": {
@@ -713,26 +713,26 @@
       "averageVolume": 1967175
     },
     "AER": {
-      "peTTM": 7.21351,
+      "peTTM": 7.1886973,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 158.81,
       "fiftyTwoWeekLow": 118.93,
       "divYield": 1.0014307,
       "beta": null,
-      "eps": 20.28,
+      "eps": 20.35,
       "volume": 804967,
       "averageVolume": 1148456
     },
     "AIR": {
-      "peTTM": 27.236366,
+      "peTTM": 27.79794,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 154,
-      "fiftyTwoWeekLow": 72,
+      "fiftyTwoWeekLow": 73.05,
       "divYield": 0,
       "beta": null,
-      "eps": 4.95,
+      "eps": 4.85,
       "volume": 461036,
-      "averageVolume": 456022
+      "averageVolume": 460535
     },
     "LULU": {
       "peTTM": 9.363496,
@@ -746,24 +746,24 @@
       "averageVolume": 3408482
     },
     "NKE": {
-      "peTTM": 19.136148,
+      "peTTM": 19.409523,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 80.17,
       "fiftyTwoWeekLow": 38.86,
       "divYield": 4.0537182,
       "beta": null,
-      "eps": 2.13,
+      "eps": 2.1,
       "volume": 11727607,
-      "averageVolume": 24142388
+      "averageVolume": 24291377
     },
     "HSY": {
-      "peTTM": 25.718622,
+      "peTTM": 25.437927,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 239.48,
       "fiftyTwoWeekLow": 161.43,
       "divYield": 2.9971855,
       "beta": null,
-      "eps": 7.25,
+      "eps": 7.33,
       "volume": 719751,
       "averageVolume": 1897619
     },
@@ -779,15 +779,15 @@
       "averageVolume": 5246417
     },
     "FTAI": {
-      "peTTM": 43.326443,
+      "peTTM": 45.88621,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 323.51,
-      "fiftyTwoWeekLow": 144.975,
+      "fiftyTwoWeekLow": 145.5,
       "divYield": 0.8594106,
       "beta": null,
-      "eps": 4.84,
+      "eps": 4.57,
       "volume": 903641,
-      "averageVolume": 1323285
+      "averageVolume": 1318643
     },
     "NVO": {
       "peTTM": 11.512316,
@@ -801,24 +801,24 @@
       "averageVolume": 12398216
     },
     "BABA": {
-      "peTTM": 29.612902,
+      "peTTM": 26.999998,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 192.67,
       "fiftyTwoWeekLow": 91.99,
       "divYield": 5.548150000000001,
       "beta": null,
-      "eps": 4.03,
+      "eps": 4.42,
       "volume": 32356925,
       "averageVolume": 12320103
     },
     "UNH": {
-      "peTTM": 24.753172,
+      "peTTM": 25.055235,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 461.62,
       "fiftyTwoWeekLow": 255.97,
       "divYield": 2.3255814,
       "beta": null,
-      "eps": 15.76,
+      "eps": 15.57,
       "volume": 4878587,
       "averageVolume": 5850480
     },
