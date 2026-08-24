@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T02:53:50.249Z",
+  "updatedAt": "2026-08-24T03:51:52.855Z",
   "quotes": {
     "BRK-B": {
       "c": 495.82,
@@ -24,9 +24,9 @@
       "extendedLabel": null
     },
     "4931.TWO": {
-      "c": 258.5,
-      "d": -21.5,
-      "dp": -7.678571,
+      "c": 256,
+      "d": -24,
+      "dp": -8.540925,
       "o": 266,
       "h": 272,
       "l": 255.5,
@@ -36,10 +36,10 @@
       "exchange": "Taipei Exchange",
       "fiftyTwoWeekHigh": 287,
       "fiftyTwoWeekLow": 118,
-      "volume": 5711748,
+      "volume": 6445737,
       "averageVolume": 7956419,
-      "marketCap": 16948749312,
-      "peTTM": 43.372482,
+      "marketCap": 16784834560,
+      "peTTM": 42.95302,
       "eps": 5.96,
       "divYield": 0.008928572,
       "marketState": "REGULAR",
@@ -378,7 +378,7 @@
     "6634.TWO": {
       "c": 62.2,
       "d": 1.2999992,
-      "dp": 2.1775532,
+      "dp": 2.1346457,
       "o": 60.9,
       "h": 63.2,
       "l": 60.6,
@@ -388,7 +388,7 @@
       "exchange": "Taipei Exchange",
       "fiftyTwoWeekHigh": 85,
       "fiftyTwoWeekLow": 29.05,
-      "volume": 75244,
+      "volume": 77245,
       "averageVolume": 153964,
       "marketCap": 4434171392,
       "peTTM": null,
@@ -421,7 +421,7 @@
       "exchange": "Taipei Exchange",
       "weburl": null,
       "currency": "TWD",
-      "marketCap": 16948749312,
+      "marketCap": 16784834560,
       "ipo": null,
       "ticker": null
     },
@@ -647,14 +647,14 @@
       "averageVolume": 4793664
     },
     "4931.TWO": {
-      "peTTM": 43.372482,
+      "peTTM": 42.95302,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 287,
       "fiftyTwoWeekLow": 118,
       "divYield": 0.8928571999999999,
       "beta": null,
       "eps": 5.96,
-      "volume": 5711748,
+      "volume": 6445737,
       "averageVolume": 7956419
     },
     "LWLG": {
@@ -830,12 +830,12 @@
       "divYield": 0,
       "beta": null,
       "eps": -1.66,
-      "volume": 75244,
+      "volume": 77245,
       "averageVolume": 153964
     }
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031467322
+    "TWD": 0.031455442
   }
 }
