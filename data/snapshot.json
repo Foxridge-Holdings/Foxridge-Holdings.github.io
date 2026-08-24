@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T21:18:29.594Z",
+  "updatedAt": "2026-08-24T01:06:04.539Z",
   "quotes": {
     "BRK-B": {
       "c": 495.82,
@@ -42,7 +42,7 @@
       "peTTM": 46.979866,
       "eps": 5.96,
       "divYield": 0.00915751,
-      "marketState": "PREPRE",
+      "marketState": "REGULAR",
       "extendedLabel": null
     },
     "LWLG": {
@@ -394,7 +394,7 @@
       "peTTM": null,
       "eps": -1.66,
       "divYield": 0,
-      "marketState": "PREPRE",
+      "marketState": "REGULAR",
       "extendedLabel": null
     }
   },
@@ -836,6 +836,6 @@
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031427763
+    "TWD": 0.031477228
   }
 }
