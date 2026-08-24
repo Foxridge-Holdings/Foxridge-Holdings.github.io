@@ -15,6 +15,7 @@ Two paths feed data into the page:
 |-----------------------------------|------------------------------------------------|-------------------------------|
 | **Snapshot** (`data/snapshot.json`) | Auto-refreshed every 3 hours by GitHub Actions | Server-side; visitors pay nothing |
 | **Live API** (Refresh button)     | When *you* click Refresh                       | Hits Finnhub / RapidAPI from browser |
+| **Parse Data**                    | Quota-free manual fallback                     | Uses the Foxridge Cloudflare Worker |
 
 Visitors loading the page never call any quote API directly — they read the
 already-committed snapshot. The "Updated 2 hours ago" pill next to the
@@ -91,13 +92,15 @@ Edit [data/monitored.csv](data/monitored.csv). Schema:
 
 ```csv
 symbol,buy_threshold,currency,market,note,link
-POOL,180,USD,US,Sample monitored stock,https://au.finance.yahoo.com/quote/POOL/
+POOL,180,USD,US,,https://au.finance.yahoo.com/quote/POOL/
 ```
 
 - `symbol` and a positive `buy_threshold` are required.
 - Enter the threshold in the stock's native quote currency.
 - `currency` defaults to `USD`; `market` and `link` use the same inference and
   fallback behavior as holdings.
+- A blank `note` displays **Research candidate**. Use the field only when a
+  stock needs a more specific research note.
 - Position versus threshold is calculated from the current quote and is never
   stored in the CSV.
 - A symbol may appear in both the holdings and monitored files.
@@ -155,6 +158,18 @@ node scripts/refresh.mjs
 ```
 
 Set `RAPIDAPI_KEY=...` to override the public browser key for a local run.
+
+## Parse Data Worker
+
+Parse Data is the quota-free backup to Refresh. It calls a Foxridge-owned
+Cloudflare Worker, which forwards validated quote requests to Yahoo Finance and
+adds the CORS headers required by GitHub Pages. It never falls back to the paid
+Finnhub/RapidAPI path automatically.
+
+The one-time deployment and smoke-test procedure is documented in
+[`worker/README.md`](worker/README.md). The deployed Worker URL is configured
+as `PARSE_PROXY_BASE` in [`js/config.js`](js/config.js). Redeploy the Worker
+whenever files under `worker/` change.
 
 ## Deploying
 

@@ -14,6 +14,11 @@ export const FINNHUB_RATE_LIMIT_PER_MIN = 60;
 export const RAPIDAPI_KEY = "85a86400aemshbe3cc3b29bf318dp104fdfjsnf3220b71a4a9";
 export const RAPIDAPI_HOST = "apidojo-yahoo-finance-v1.p.rapidapi.com";
 
+// Foxridge-owned Cloudflare Worker used by the quota-free Parse Data button.
+// Set after deploying /worker; unlike API keys, this public URL is safe to
+// expose in the GitHub Pages source.
+export const PARSE_PROXY_BASE = "https://foxridge-holdings-yahoo-proxy.wolfholdings-yahoo-proxy.workers.dev";
+
 // Conservative pacing. RapidAPI's hard ceiling is monthly, but spacing requests
 // keeps the headroom obvious.
 export const RAPIDAPI_RATE_LIMIT_PER_MIN = 30;

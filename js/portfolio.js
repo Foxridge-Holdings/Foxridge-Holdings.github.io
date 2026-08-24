@@ -15,7 +15,7 @@ import {
   changeClass,
 } from "./format.js";
 import { loadSnapshot } from "./snapshot.js";
-import { parseAllSymbols } from "./parse.js";
+import { parseAllSymbols } from "./parse.js?v=20260824-worker";
 import {
   ALL,
   cashForScope,
@@ -704,19 +704,33 @@ async function loadAllLive(force = true) {
 }
 
 function setRefreshing(on) {
-  const btn = $("refresh");
-  const icon = $("refresh-icon");
-  if (on) {
-    btn.disabled = true;
-    icon.outerHTML = '<span class="spin" id="refresh-icon"></span>';
-  } else {
-    btn.disabled = false;
-    const cur = $("refresh-icon");
-    if (cur) cur.outerHTML = '<span id="refresh-icon">↻</span>';
-  }
+  setQuoteActionsBusy("refresh", on);
 }
 
 /* -------- manual Yahoo Finance parse path (Parse Data button) -------- */
+
+function setQuoteActionsBusy(activeKind, on) {
+  for (const kind of ["refresh", "parse"]) {
+    const button = $(kind);
+    if (button) button.disabled = on;
+    if (!on) {
+      const current = $(`${kind}-icon`);
+      if (current) {
+        current.outerHTML = `<span id="${kind}-icon">${kind === "refresh" ? "↻" : "⚡"}</span>`;
+      }
+    }
+  }
+  if (on) {
+    const icon = $(`${activeKind}-icon`);
+    if (icon) icon.outerHTML = `<span class="spin" id="${activeKind}-icon"></span>`;
+  }
+}
+
+function failureSymbols(failures, limit = 5) {
+  const symbols = (failures || []).map((failure) => failure.symbol);
+  if (symbols.length <= limit) return symbols.join(", ");
+  return `${symbols.slice(0, limit).join(", ")} +${symbols.length - limit} more`;
+}
 
 async function loadAllParse() {
   setParsing(true);
@@ -725,15 +739,11 @@ async function loadAllParse() {
     const fxSyms = fxSymbolsForCurrencies(uniqueCurrencies());
     const symbols = [...stockSymbols, ...fxSyms];
     showBanner(`Parsing 0/${symbols.length} from Yahoo Finance…`, "info");
-    const lastFailure = { sym: null, attempts: [] };
-    const quotes = await parseAllSymbols(symbols, ({ done, total, sym, ok, source, attempts }) => {
+    const result = await parseAllSymbols(symbols, ({ done, total, sym, ok, source }) => {
       const tag = ok ? `✓ ${source || ""}`.trim() : "✗";
       showBanner(`Parsing ${done}/${total} from Yahoo Finance — ${sym} ${tag}`, "info");
-      if (!ok) {
-        lastFailure.sym = sym;
-        lastFailure.attempts = attempts || [];
-      }
     });
+    const quotes = result.quotes;
 
     // Apply FX first so cost/value totals are correct even if some stocks fail.
     const rates = { USD: 1 };
@@ -750,47 +760,35 @@ async function loadAllParse() {
       return r;
     };
     state.rows = state.rows.map(enrich);
-    const okCount = matched.size;
-    state.updatedAt = new Date().toISOString();
-    rerender();
+    if (result.successCount > 0) {
+      state.updatedAt = new Date().toISOString();
+      rerender();
+    }
 
-    if (okCount === stockSymbols.length) {
-      showBanner(`Parsed all ${okCount} symbols from Yahoo Finance ✓`, "info");
-      setTimeout(() => {
-        const el = $("banner");
-        if (el) el.hidden = true;
-      }, 4000);
-    } else if (okCount === 0) {
-      // Total failure — surface the last symbol's proxy attempts so the user
-      // can see what's blocked (especially useful on mobile where they don't
-      // have easy access to DevTools console).
-      const detail = lastFailure.attempts.length
-        ? ` Last (${lastFailure.sym}): ${lastFailure.attempts.slice(0, 3).join(" | ")}`
-        : "";
+    if (result.successCount === result.requestedCount) {
+      showBanner(`Parsed all ${matched.size} portfolio symbols from Yahoo Finance ✓`, "info");
+    } else if (result.successCount === 0) {
       showBanner(
-        `Parsed 0/${stockSymbols.length} — all CORS proxies blocked.${detail}`,
+        "Parse Data unavailable — snapshot prices are unchanged. Use Refresh to try the live API.",
       );
     } else {
       showBanner(
-        `Parsed ${okCount}/${stockSymbols.length}. Some symbols blocked — try again or use Refresh.`,
+        `Parsed ${result.successCount}/${result.requestedCount} Yahoo quotes. ` +
+        `Snapshot values kept for ${failureSymbols(result.failures)}.`,
       );
     }
+  } catch (error) {
+    console.warn("Parse Data failed:", error);
+    showBanner(
+      "Parse Data unavailable — snapshot prices are unchanged. Use Refresh to try the live API.",
+    );
   } finally {
     setParsing(false);
   }
 }
 
 function setParsing(on) {
-  const btn = $("parse");
-  const icon = $("parse-icon");
-  if (!btn) return;
-  btn.disabled = on;
-  if (on) {
-    if (icon) icon.outerHTML = '<span class="spin" id="parse-icon"></span>';
-  } else {
-    const cur = $("parse-icon");
-    if (cur) cur.outerHTML = '<span id="parse-icon">⚡</span>';
-  }
+  setQuoteActionsBusy("parse", on);
 }
 
 function showBanner(message, kind = "warn") {

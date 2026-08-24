@@ -1,161 +1,166 @@
-// js/parse.js
-//
-// Manual fallback for fetching stock quotes when the RapidAPI quota is
-// exhausted. Reads Yahoo Finance's unauthenticated v8 chart endpoint via a
-// self-hosted Cloudflare Worker (see /worker) that adds CORS headers, with
-// one public CORS proxy as defense-in-depth if the Worker is down.
-//
-// Returns quotes in the same shape as `normalizeApidojoQuote` in api.js,
-// so the existing render pipeline consumes them without changes.
-//
-// Note: Yahoo's chart `meta` does NOT carry `marketState` / `preMarketPrice` /
-// `postMarketPrice` — those live only on the apidojo /get-quotes endpoint used
-// by api.js. To support pre / regular / post sessions here we request 1-minute
-// candles (which include extended-hours bars when `includePrePost=true`) and
-// derive the session from the latest candle's timestamp vs the meta's
-// `currentTradingPeriod` windows.
+// Quota-free quote parsing through the Foxridge-owned Cloudflare Worker.
+// The browser never calls Yahoo Finance directly: Yahoo does not expose the
+// CORS headers required by GitHub Pages. The Worker contract is documented in
+// worker/README.md and its base URL lives in js/config.js.
 
-// Paste the Foxridge Cloudflare Worker URL here after deploying it using the
-// instructions in worker/README.md. Until then, the public fallback below
-// keeps manual quote parsing available without reusing the previous site's
-// infrastructure.
-const WORKER_BASE = "";
+import { PARSE_PROXY_BASE } from "./config.js?v=20260824-worker";
 
-const YAHOO_DIRECT = (sym) =>
-  `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(sym)}` +
-  `?interval=1m&range=1d&includePrePost=true`;
+const DEFAULT_TIMEOUT_MS = 10_000;
+const DEFAULT_CONCURRENCY = 3;
+const MAX_TRANSPORT_ATTEMPTS = 2;
+const RETRYABLE_STATUS = new Set([408, 425, 429, 500, 502, 503, 504]);
 
-// Each entry builds a fully-formed request URL from a symbol. The Worker is
-// tried first; the public proxy only runs if the Worker errors out.
-const SOURCES = [
-  ...(WORKER_BASE
-    ? [{ name: "worker", url: (sym) => `${WORKER_BASE}/?symbol=${encodeURIComponent(sym)}&interval=1m&range=1d` }]
-    : []),
-  { name: "cors.lol", url: (sym) => `https://api.cors.lol/?url=${encodeURIComponent(YAHOO_DIRECT(sym))}` },
-];
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-async function fetchYahooChart(sym, timeoutMs = 8000) {
+function proxyUrl(base, path) {
+  return `${String(base || "").replace(/\/+$/, "")}${path}`;
+}
+
+async function readJsonResponse(response) {
+  const text = await response.text();
+  if (!text) return null;
+  try {
+    return JSON.parse(text);
+  } catch {
+    return null;
+  }
+}
+
+async function requestProxy(path, options) {
+  const { proxyBase, fetchImpl, timeoutMs, sleepImpl } = options;
   const attempts = [];
-  for (const src of SOURCES) {
-    const target = src.url(sym);
+  let failure = {
+    code: "proxy_unavailable",
+    message: "The Parse Data proxy is unavailable.",
+    status: null,
+  };
+
+  for (let attempt = 1; attempt <= MAX_TRANSPORT_ATTEMPTS; attempt++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
     try {
-      const ctrl = new AbortController();
-      const t = setTimeout(() => ctrl.abort(), timeoutMs);
-      const res = await fetch(target, {
-        signal: ctrl.signal,
+      const response = await fetchImpl(proxyUrl(proxyBase, path), {
+        signal: controller.signal,
         credentials: "omit",
         cache: "no-store",
         redirect: "follow",
       });
-      clearTimeout(t);
-      if (!res.ok) {
-        attempts.push(`${src.name}: HTTP ${res.status}`);
-        continue;
+      const body = await readJsonResponse(response);
+      attempts.push(`worker: HTTP ${response.status}`);
+      if (response.ok) {
+        return { ok: true, body, status: response.status, attempts };
       }
-      const ct = (res.headers.get("content-type") || "").toLowerCase();
-      let j;
-      if (ct.includes("json")) {
-        j = await res.json();
-      } else {
-        const text = await res.text();
-        try { j = JSON.parse(text); } catch {
-          attempts.push(`${src.name}: not-JSON (${text.slice(0, 40)})`);
-          continue;
-        }
+
+      failure = {
+        code: body?.error?.code || `http_${response.status}`,
+        message: body?.error?.message || `Worker returned HTTP ${response.status}.`,
+        status: response.status,
+      };
+      if (!RETRYABLE_STATUS.has(response.status) || attempt === MAX_TRANSPORT_ATTEMPTS) {
+        break;
       }
-      if (!j?.chart || j.chart.error) {
-        attempts.push(`${src.name}: chart-${j?.chart?.error?.code || "missing"}`);
-        continue;
-      }
-      return { json: j, proxy: src.name, attempts };
-    } catch (e) {
-      attempts.push(`${src.name}: ${e.name || "Error"}`);
+    } catch (error) {
+      const timedOut = error?.name === "AbortError";
+      attempts.push(`worker: ${timedOut ? "timeout" : error?.name || "network error"}`);
+      failure = {
+        code: timedOut ? "timeout" : "network_error",
+        message: timedOut
+          ? "The Parse Data proxy timed out."
+          : "The Parse Data proxy could not be reached.",
+        status: null,
+      };
+      if (attempt === MAX_TRANSPORT_ATTEMPTS) break;
+    } finally {
+      clearTimeout(timer);
+    }
+
+    await sleepImpl(500 * attempt);
+  }
+
+  return { ok: false, ...failure, attempts };
+}
+
+function inWindow(window, timestamp) {
+  if (!window) return false;
+  const start = +window.start;
+  const end = +window.end;
+  return Number.isFinite(start) && Number.isFinite(end)
+    && timestamp >= start && timestamp < end;
+}
+
+export function normalizeYahooChartResult(result, nowMs = Date.now()) {
+  if (!result?.meta) return null;
+  const meta = result.meta;
+  const timestamps = result.timestamp || [];
+  const closes = result.indicators?.quote?.[0]?.close || [];
+  const period = meta.currentTradingPeriod || {};
+  const previousClose = +(meta.chartPreviousClose ?? meta.previousClose);
+
+  let latestIndex = -1;
+  for (let index = timestamps.length - 1; index >= 0; index--) {
+    if (Number.isFinite(closes[index])) {
+      latestIndex = index;
+      break;
     }
   }
-  return { json: null, proxy: null, attempts };
-}
 
-function inWindow(w, t) {
-  if (!w) return false;
-  const start = +w.start, end = +w.end;
-  return Number.isFinite(start) && Number.isFinite(end) && t >= start && t < end;
-}
-
-function normalizeYahooChartResult(r) {
-  if (!r) return null;
-  const meta = r.meta;
-  if (!meta) return null;
-  const ts = r.timestamp || [];
-  const closes = r.indicators?.quote?.[0]?.close || [];
-  const period = meta.currentTradingPeriod || {};
-  const pc = +(meta.chartPreviousClose ?? meta.previousClose);
-
-  // Walk back from the end to find the most recent non-null close.
-  let latestIdx = -1;
-  for (let i = ts.length - 1; i >= 0; i--) {
-    if (Number.isFinite(closes[i])) { latestIdx = i; break; }
-  }
-
-  let c, latestTs;
-  if (latestIdx >= 0) {
-    c = +closes[latestIdx];
-    latestTs = +ts[latestIdx];
+  let price;
+  let latestTimestamp;
+  if (latestIndex >= 0) {
+    price = +closes[latestIndex];
+    latestTimestamp = +timestamps[latestIndex];
   } else {
-    // No candles at all — fall back to whatever the meta carries so the row
-    // is still populated with the previous close.
-    c = +meta.regularMarketPrice;
-    latestTs = +meta.regularMarketTime || 0;
-    if (!Number.isFinite(c) && Number.isFinite(pc)) c = pc;
+    price = +meta.regularMarketPrice;
+    latestTimestamp = +meta.regularMarketTime || 0;
+    if (!Number.isFinite(price) && Number.isFinite(previousClose)) {
+      price = previousClose;
+    }
   }
-  if (!Number.isFinite(c)) return null;
+  if (!Number.isFinite(price)) return null;
 
-  // Determine session from where the latest candle falls.
   let marketState = null;
   let extendedLabel = null;
-  let baseline = pc;
+  let baseline = previousClose;
 
-  if (inWindow(period.pre, latestTs)) {
+  if (inWindow(period.pre, latestTimestamp)) {
     marketState = "PRE";
     extendedLabel = "Pre-market";
-  } else if (inWindow(period.regular, latestTs)) {
+  } else if (inWindow(period.regular, latestTimestamp)) {
     marketState = "REGULAR";
-  } else if (inWindow(period.post, latestTs)) {
+  } else if (inWindow(period.post, latestTimestamp)) {
     marketState = "POST";
     extendedLabel = "After hours";
-    // After-hours change is measured against today's regular session close,
-    // i.e. the last candle that closed before regular.end.
-    const regEnd = +period.regular?.end;
-    if (Number.isFinite(regEnd)) {
-      for (let i = ts.length - 1; i >= 0; i--) {
-        if (Number.isFinite(closes[i]) && +ts[i] < regEnd) { baseline = +closes[i]; break; }
+    const regularEnd = +period.regular?.end;
+    if (Number.isFinite(regularEnd)) {
+      for (let index = timestamps.length - 1; index >= 0; index--) {
+        if (Number.isFinite(closes[index]) && +timestamps[index] < regularEnd) {
+          baseline = +closes[index];
+          break;
+        }
       }
     }
   } else {
-    // Latest candle is outside today's pre/regular/post windows. If wall-clock
-    // time is between today's post.end and tomorrow's pre.start, we're in the
-    // overnight ATS window — Yahoo doesn't return overnight candles, so c is
-    // the last after-hours close, but the user-visible label should reflect
-    // that the regular sessions have all wrapped.
     const postEnd = +period.post?.end;
     const preStart = +period.pre?.start;
-    const nowSec = Date.now() / 1000;
-    if (Number.isFinite(postEnd) && nowSec > postEnd) {
+    const nowSeconds = nowMs / 1000;
+    if (Number.isFinite(postEnd) && nowSeconds > postEnd) {
       marketState = "OVERNIGHT";
       extendedLabel = "Overnight";
-    } else if (Number.isFinite(preStart) && nowSec < preStart) {
-      // Before today's pre opens — show previous close, no extended label.
+    } else if (Number.isFinite(preStart) && nowSeconds < preStart) {
       marketState = "CLOSED";
     }
   }
 
-  const d = Number.isFinite(baseline) ? c - baseline : 0;
-  const dp = Number.isFinite(baseline) && baseline !== 0 ? (d / baseline) * 100 : 0;
+  const difference = Number.isFinite(baseline) ? price - baseline : 0;
+  const percentage = Number.isFinite(baseline) && baseline !== 0
+    ? (difference / baseline) * 100
+    : 0;
 
   return {
-    c,
-    d,
-    dp,
-    pc: Number.isFinite(pc) ? pc : NaN,
+    c: price,
+    d: difference,
+    dp: percentage,
+    pc: Number.isFinite(previousClose) ? previousClose : NaN,
     o: NaN,
     h: NaN,
     l: NaN,
@@ -175,42 +180,126 @@ function normalizeYahooChartResult(r) {
   };
 }
 
-export async function parseAllSymbols(symbols, onProgress) {
-  const out = {};
-  const queue = [...symbols];
-  let done = 0;
+function failureForSymbol(symbol, requestFailure) {
+  return {
+    symbol,
+    code: requestFailure.code || "invalid_response",
+    message: requestFailure.message || "No valid Yahoo Finance quote was returned.",
+    status: requestFailure.status ?? null,
+    attempts: requestFailure.attempts || [],
+  };
+}
 
-  async function worker() {
-    while (queue.length) {
-      const sym = queue.shift();
-      const got = await fetchYahooChart(sym);
-      const result = got?.json?.chart?.result?.[0];
-      const norm = result ? normalizeYahooChartResult(result) : null;
-      if (norm) norm.__source = got.proxy;
-      out[sym] = norm;
-      done++;
-      if (!norm) {
-        console.warn(`[parse] ${sym} failed:`, got.attempts.join(" | "));
-      } else {
-        console.log(`[parse] ${sym} ok via ${got.proxy} (after ${got.attempts.length} fallback${got.attempts.length === 1 ? "" : "s"})`);
-      }
-      if (onProgress) {
-        onProgress({
-          done,
-          total: symbols.length,
-          sym,
-          ok: !!norm,
-          source: got?.proxy || null,
-          attempts: got?.attempts || [],
-        });
-      }
-      // Throttle ~300 ms to dodge Cloudflare 429s on shared proxy IPs.
-      await new Promise((r) => setTimeout(r, 300));
+async function fetchYahooChart(symbol, options) {
+  const request = await requestProxy(
+    `/quote?symbol=${encodeURIComponent(symbol)}&interval=1m&range=1d`,
+    options,
+  );
+  if (!request.ok) return { quote: null, failure: failureForSymbol(symbol, request) };
+
+  const chartResult = request.body?.data?.chart?.result?.[0];
+  const quote = normalizeYahooChartResult(chartResult);
+  if (!request.body?.ok || !quote) {
+    return {
+      quote: null,
+      failure: failureForSymbol(symbol, {
+        code: "invalid_response",
+        message: "The Worker returned an invalid Yahoo Finance response.",
+        status: request.status,
+        attempts: request.attempts,
+      }),
+    };
+  }
+
+  quote.__source = "foxridge-worker";
+  return { quote, failure: null, attempts: request.attempts };
+}
+
+export async function parseAllSymbols(symbols, onProgress, options = {}) {
+  const uniqueSymbols = [...new Set(
+    (symbols || [])
+      .map((symbol) => String(symbol || "").trim().toUpperCase())
+      .filter(Boolean),
+  )];
+  const requestedCount = uniqueSymbols.length;
+  if (!requestedCount) {
+    return { quotes: {}, failures: [], requestedCount: 0, successCount: 0 };
+  }
+
+  const proxyBase = options.proxyBase ?? PARSE_PROXY_BASE;
+  const fetchImpl = options.fetchImpl || globalThis.fetch;
+  const timeoutMs = options.timeoutMs || DEFAULT_TIMEOUT_MS;
+  const sleepImpl = options.sleepImpl || sleep;
+  const concurrency = Math.max(
+    1,
+    Math.min(options.concurrency || DEFAULT_CONCURRENCY, requestedCount),
+  );
+  const requestOptions = { proxyBase, fetchImpl, timeoutMs, sleepImpl };
+
+  if (!proxyBase) {
+    const failures = uniqueSymbols.map((symbol) => failureForSymbol(symbol, {
+      code: "proxy_not_configured",
+      message: "The Parse Data proxy has not been configured.",
+    }));
+    return { quotes: {}, failures, requestedCount, successCount: 0 };
+  }
+
+  if (options.checkHealth !== false) {
+    const health = await requestProxy("/health", requestOptions);
+    if (!health.ok || health.body?.ok !== true) {
+      const failures = uniqueSymbols.map((symbol) => failureForSymbol(symbol, {
+        code: health.code || "proxy_unavailable",
+        message: health.message || "The Parse Data proxy health check failed.",
+        status: health.status,
+        attempts: health.attempts,
+      }));
+      failures.forEach((failure, index) => onProgress?.({
+        done: index + 1,
+        total: requestedCount,
+        sym: failure.symbol,
+        ok: false,
+        source: null,
+        attempts: failure.attempts,
+      }));
+      return { quotes: {}, failures, requestedCount, successCount: 0 };
     }
   }
 
-  // 3 concurrent workers — quick enough (~1.5 s for 11 symbols),
-  // gentle enough to not get rate-limited.
-  await Promise.all([worker(), worker(), worker()]);
-  return out;
+  const quotes = {};
+  const failures = [];
+  const queue = [...uniqueSymbols];
+  let done = 0;
+
+  async function runWorker() {
+    while (queue.length) {
+      const symbol = queue.shift();
+      const result = await fetchYahooChart(symbol, requestOptions);
+      if (result.quote) {
+        quotes[symbol] = result.quote;
+        console.log(`[parse] ${symbol} ok via foxridge-worker`);
+      } else {
+        failures.push(result.failure);
+        console.warn(`[parse] ${symbol} failed:`, result.failure.attempts.join(" | "));
+      }
+      done++;
+      onProgress?.({
+        done,
+        total: requestedCount,
+        sym: symbol,
+        ok: !!result.quote,
+        source: result.quote ? "foxridge-worker" : null,
+        attempts: result.failure?.attempts || result.attempts || [],
+      });
+    }
+  }
+
+  await Promise.all(Array.from({ length: concurrency }, () => runWorker()));
+  const order = new Map(uniqueSymbols.map((symbol, index) => [symbol, index]));
+  failures.sort((a, b) => order.get(a.symbol) - order.get(b.symbol));
+  return {
+    quotes,
+    failures,
+    requestedCount,
+    successCount: Object.keys(quotes).length,
+  };
 }

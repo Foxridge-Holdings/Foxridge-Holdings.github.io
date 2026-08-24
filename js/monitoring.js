@@ -2,7 +2,7 @@ import { loadMonitored } from "./csv.js";
 import { getQuotesBatch } from "./api.js";
 import { fmtNative, fmtSignedNative, fmtSignedPercent, fmtRelativeTime } from "./format.js";
 import { thresholdMetrics, sortByThreshold } from "./monitor-model.js";
-import { parseAllSymbols } from "./parse.js";
+import { parseAllSymbols } from "./parse.js?v=20260824-worker";
 import { loadSnapshot } from "./snapshot.js";
 
 const EXTERNAL_SVG = `<svg class="link-icon" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42L17.59 5H14V3z" fill="currentColor"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7z" fill="currentColor"/></svg>`;
@@ -229,16 +229,26 @@ function showBanner(message, kind = "warn") {
 }
 
 function setBusy(kind, on) {
-  const btn = $(kind);
-  const icon = $(`${kind}-icon`);
-  if (!btn) return;
-  btn.disabled = on;
-  if (on && icon) {
-    icon.outerHTML = `<span class="spin" id="${kind}-icon"></span>`;
-  } else {
-    const current = $(`${kind}-icon`);
-    if (current) current.outerHTML = `<span id="${kind}-icon">${kind === "refresh" ? "↻" : "⚡"}</span>`;
+  for (const action of ["refresh", "parse"]) {
+    const button = $(action);
+    if (button) button.disabled = on;
+    if (!on) {
+      const current = $(`${action}-icon`);
+      if (current) {
+        current.outerHTML = `<span id="${action}-icon">${action === "refresh" ? "↻" : "⚡"}</span>`;
+      }
+    }
   }
+  if (on) {
+    const icon = $(`${kind}-icon`);
+    if (icon) icon.outerHTML = `<span class="spin" id="${kind}-icon"></span>`;
+  }
+}
+
+function failureSymbols(failures, limit = 5) {
+  const symbols = (failures || []).map((failure) => failure.symbol);
+  if (symbols.length <= limit) return symbols.join(", ");
+  return `${symbols.slice(0, limit).join(", ")} +${symbols.length - limit} more`;
 }
 
 async function refreshLive() {
@@ -262,16 +272,32 @@ async function parseLive() {
   try {
     const symbols = [...new Set(state.rows.map((row) => row.monitor.symbol))];
     showBanner(`Parsing 0/${symbols.length} from Yahoo Finance…`, "info");
-    const quotes = await parseAllSymbols(symbols, ({ done, total, sym, ok }) => {
+    const result = await parseAllSymbols(symbols, ({ done, total, sym, ok }) => {
       showBanner(`Parsing ${done}/${total} — ${sym} ${ok ? "✓" : "✗"}`, "info");
     });
-    applyQuotes(quotes);
-    state.updatedAt = new Date().toISOString();
-    render();
-    const count = Object.values(quotes).filter(Boolean).length;
-    showBanner(`Parsed ${count}/${symbols.length} monitored prices.`, "info");
+    if (result.successCount > 0) {
+      applyQuotes(result.quotes);
+      state.updatedAt = new Date().toISOString();
+      render();
+    }
+
+    if (result.successCount === result.requestedCount) {
+      showBanner(`Parsed all ${result.successCount} monitored prices ✓`, "info");
+    } else if (result.successCount === 0) {
+      showBanner(
+        "Parse Data unavailable — snapshot prices are unchanged. Use Refresh to try the live API.",
+      );
+    } else {
+      showBanner(
+        `Parsed ${result.successCount}/${result.requestedCount} monitored prices. ` +
+        `Snapshot prices kept for ${failureSymbols(result.failures)}.`,
+      );
+    }
   } catch (error) {
-    showBanner(`Could not parse monitored prices — ${error.message}`);
+    console.warn("Parse Data failed:", error);
+    showBanner(
+      "Parse Data unavailable — snapshot prices are unchanged. Use Refresh to try the live API.",
+    );
   } finally {
     setBusy("parse", false);
   }

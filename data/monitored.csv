@@ -1,5 +1,5 @@
 symbol,buy_threshold,currency,market,note,link
-POOL,180,USD,US,Sample monitored stock,https://au.finance.yahoo.com/quote/POOL/
+POOL,180,USD,US,,https://au.finance.yahoo.com/quote/POOL/
 VITL,9.5,USD,US,,https://au.finance.yahoo.com/quote/VITL/
 AER,125,USD,US,,https://au.finance.yahoo.com/quote/AER/
 AIR,105,USD,US,,https://au.finance.yahoo.com/quote/AIR/
