@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T18:09:37.149Z",
+  "updatedAt": "2026-08-29T22:58:41.749Z",
   "quotes": {
     "BRK-B": {
       "c": 505,
@@ -193,8 +193,8 @@
       "volume": 545111,
       "averageVolume": 925840,
       "marketCap": 6834604544,
-      "peTTM": 17.285847,
-      "eps": 10.88,
+      "peTTM": 17.097273,
+      "eps": 11,
       "divYield": 0.027141783,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -281,8 +281,8 @@
       "volume": 3900557,
       "averageVolume": 3394685,
       "marketCap": 13718449152,
-      "peTTM": 9.782186,
-      "eps": 12.35,
+      "peTTM": 9.314571,
+      "eps": 12.97,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -325,8 +325,8 @@
       "volume": 821326,
       "averageVolume": 1824851,
       "marketCap": 35975741440,
-      "peTTM": 24.427013,
-      "eps": 7.33,
+      "peTTM": 24.76487,
+      "eps": 7.23,
       "divYield": 0.031127287,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -829,13 +829,13 @@
       "averageVolume": 146279
     },
     "POOL": {
-      "peTTM": 17.285847,
+      "peTTM": 17.097273,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 336.15,
       "fiftyTwoWeekLow": 172.68,
       "divYield": 2.7141783,
       "beta": null,
-      "eps": 10.88,
+      "eps": 11,
       "volume": 545111,
       "averageVolume": 925840
     },
@@ -873,13 +873,13 @@
       "averageVolume": 457629
     },
     "LULU": {
-      "peTTM": 9.782186,
+      "peTTM": 9.314571,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 225.98,
       "fiftyTwoWeekLow": 104.44,
       "divYield": 0,
       "beta": null,
-      "eps": 12.35,
+      "eps": 12.97,
       "volume": 3900557,
       "averageVolume": 3394685
     },
@@ -895,13 +895,13 @@
       "averageVolume": 24788458
     },
     "HSY": {
-      "peTTM": 24.427013,
+      "peTTM": 24.76487,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 239.48,
       "fiftyTwoWeekLow": 161.43,
       "divYield": 3.1127287,
       "beta": null,
-      "eps": 7.33,
+      "eps": 7.23,
       "volume": 821326,
       "averageVolume": 1824851
     },
