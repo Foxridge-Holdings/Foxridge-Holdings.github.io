@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T22:58:41.749Z",
+  "updatedAt": "2026-08-30T03:31:43.975Z",
   "quotes": {
     "BRK-B": {
       "c": 505,
@@ -15,7 +15,7 @@
       "fiftyTwoWeekHigh": 537.74,
       "fiftyTwoWeekLow": 464.01,
       "volume": 4848036,
-      "averageVolume": 4713491,
+      "averageVolume": 4715677,
       "marketCap": 1081058459648,
       "peTTM": 12.656641,
       "eps": 39.9,
@@ -59,7 +59,7 @@
       "fiftyTwoWeekHigh": 18.71,
       "fiftyTwoWeekLow": 2.84,
       "volume": 2291490,
-      "averageVolume": 4079596,
+      "averageVolume": 4051252,
       "marketCap": 846378176,
       "peTTM": null,
       "eps": -0.16,
@@ -81,10 +81,10 @@
       "fiftyTwoWeekHigh": 17.45,
       "fiftyTwoWeekLow": 4.23,
       "volume": 50570353,
-      "averageVolume": 96281606,
+      "averageVolume": 95702850,
       "marketCap": 57162162176,
-      "peTTM": 72.92857,
-      "eps": 0.14,
+      "peTTM": 78.53847,
+      "eps": 0.13,
       "divYield": 0.013220019,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -103,7 +103,7 @@
       "fiftyTwoWeekHigh": 58.515,
       "fiftyTwoWeekLow": 3.606,
       "volume": 172563,
-      "averageVolume": 311459,
+      "averageVolume": 309255,
       "marketCap": null,
       "peTTM": 19.56869,
       "eps": 0.24937798,
@@ -125,7 +125,7 @@
       "fiftyTwoWeekHigh": 745.61,
       "fiftyTwoWeekLow": 297.5,
       "volume": 6614095,
-      "averageVolume": 5970979,
+      "averageVolume": 5981309,
       "marketCap": 106748141568,
       "peTTM": 24.036308,
       "eps": 13.22,
@@ -147,7 +147,7 @@
       "fiftyTwoWeekHigh": 96.68,
       "fiftyTwoWeekLow": 23.37,
       "volume": 4874836,
-      "averageVolume": 5713720,
+      "averageVolume": 5707250,
       "marketCap": 11895905280,
       "peTTM": 23.24272,
       "eps": 2.06,
@@ -169,7 +169,7 @@
       "fiftyTwoWeekHigh": 426.06,
       "fiftyTwoWeekLow": 29.16,
       "volume": 9686,
-      "averageVolume": 146279,
+      "averageVolume": 145476,
       "marketCap": 49751064576,
       "peTTM": 14.844661,
       "eps": 2.06,
@@ -191,7 +191,7 @@
       "fiftyTwoWeekHigh": 336.15,
       "fiftyTwoWeekLow": 172.68,
       "volume": 545111,
-      "averageVolume": 925840,
+      "averageVolume": 919796,
       "marketCap": 6834604544,
       "peTTM": 17.097273,
       "eps": 11,
@@ -213,7 +213,7 @@
       "fiftyTwoWeekHigh": 52.79,
       "fiftyTwoWeekLow": 7.95,
       "volume": 1171827,
-      "averageVolume": 1911082,
+      "averageVolume": 1899349,
       "marketCap": 463231104,
       "peTTM": null,
       "eps": -0.05,
@@ -235,10 +235,10 @@
       "fiftyTwoWeekHigh": 158.81,
       "fiftyTwoWeekLow": 118.93,
       "volume": 838387,
-      "averageVolume": 1094996,
+      "averageVolume": 1090923,
       "marketCap": 23183079424,
-      "peTTM": 7.247666,
-      "eps": 20.35,
+      "peTTM": 7.2726827,
+      "eps": 20.28,
       "divYield": 0.009934446,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -257,10 +257,10 @@
       "fiftyTwoWeekHigh": 154,
       "fiftyTwoWeekLow": 73.05,
       "volume": 181736,
-      "averageVolume": 457629,
+      "averageVolume": 453249,
       "marketCap": 5362075136,
-      "peTTM": 27.349077,
-      "eps": 4.87,
+      "peTTM": 27.922432,
+      "eps": 4.77,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -279,7 +279,7 @@
       "fiftyTwoWeekHigh": 225.98,
       "fiftyTwoWeekLow": 104.44,
       "volume": 3900557,
-      "averageVolume": 3394685,
+      "averageVolume": 3402869,
       "marketCap": 13718449152,
       "peTTM": 9.314571,
       "eps": 12.97,
@@ -301,7 +301,7 @@
       "fiftyTwoWeekHigh": 76.97,
       "fiftyTwoWeekLow": 38.17,
       "volume": 28339979,
-      "averageVolume": 24788458,
+      "averageVolume": 24845666,
       "marketCap": 58746548224,
       "peTTM": 18.333332,
       "eps": 2.16,
@@ -323,7 +323,7 @@
       "fiftyTwoWeekHigh": 239.48,
       "fiftyTwoWeekLow": 161.43,
       "volume": 821326,
-      "averageVolume": 1824851,
+      "averageVolume": 1808923,
       "marketCap": 35975741440,
       "peTTM": 24.76487,
       "eps": 7.23,
@@ -345,10 +345,10 @@
       "fiftyTwoWeekHigh": 122.41,
       "fiftyTwoWeekLow": 82,
       "volume": 2342107,
-      "averageVolume": 5110993,
+      "averageVolume": 5067063,
       "marketCap": 89612820480,
-      "peTTM": 19.578068,
-      "eps": 5.38,
+      "peTTM": 19.65112,
+      "eps": 5.36,
       "divYield": 0.062074184,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -367,7 +367,7 @@
       "fiftyTwoWeekHigh": 323.51,
       "fiftyTwoWeekLow": 147.98,
       "volume": 984484,
-      "averageVolume": 1324779,
+      "averageVolume": 1319379,
       "marketCap": 20025827328,
       "peTTM": 43.52232,
       "eps": 4.48,
@@ -389,7 +389,7 @@
       "fiftyTwoWeekHigh": 64.16,
       "fiftyTwoWeekLow": 35.12,
       "volume": 8487691,
-      "averageVolume": 12411377,
+      "averageVolume": 12349226,
       "marketCap": 201643180032,
       "peTTM": 11.289604,
       "eps": 4.04,
@@ -411,7 +411,7 @@
       "fiftyTwoWeekHigh": 192.67,
       "fiftyTwoWeekLow": 91.99,
       "volume": 9660747,
-      "averageVolume": 12790582,
+      "averageVolume": 12741074,
       "marketCap": 295540654080,
       "peTTM": 26.30531,
       "eps": 4.52,
@@ -433,7 +433,7 @@
       "fiftyTwoWeekHigh": 461.62,
       "fiftyTwoWeekLow": 255.97,
       "volume": 2453364,
-      "averageVolume": 5671985,
+      "averageVolume": 5620930,
       "marketCap": 352709902336,
       "peTTM": 25.384369,
       "eps": 15.48,
@@ -749,7 +749,7 @@
       "beta": null,
       "eps": 39.9,
       "volume": 4848036,
-      "averageVolume": 4713491
+      "averageVolume": 4715677
     },
     "4931.TWO": {
       "peTTM": 45.644894,
@@ -771,18 +771,18 @@
       "beta": null,
       "eps": -0.16,
       "volume": 2291490,
-      "averageVolume": 4079596
+      "averageVolume": 4051252
     },
     "NOK": {
-      "peTTM": 72.92857,
+      "peTTM": 78.53847,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 17.45,
       "fiftyTwoWeekLow": 4.23,
       "divYield": 1.3220019,
       "beta": null,
-      "eps": 0.14,
+      "eps": 0.13,
       "volume": 50570353,
-      "averageVolume": 96281606
+      "averageVolume": 95702850
     },
     "FLYT": {
       "peTTM": 19.56869,
@@ -793,7 +793,7 @@
       "beta": null,
       "eps": 0.24937798,
       "volume": 172563,
-      "averageVolume": 311459
+      "averageVolume": 309255
     },
     "APP": {
       "peTTM": 24.036308,
@@ -804,7 +804,7 @@
       "beta": null,
       "eps": 13.22,
       "volume": 6614095,
-      "averageVolume": 5970979
+      "averageVolume": 5981309
     },
     "AMKR": {
       "peTTM": 23.24272,
@@ -815,7 +815,7 @@
       "beta": null,
       "eps": 2.06,
       "volume": 4874836,
-      "averageVolume": 5713720
+      "averageVolume": 5707250
     },
     "MARUY": {
       "peTTM": 14.844661,
@@ -826,7 +826,7 @@
       "beta": null,
       "eps": 2.06,
       "volume": 9686,
-      "averageVolume": 146279
+      "averageVolume": 145476
     },
     "POOL": {
       "peTTM": 17.097273,
@@ -837,7 +837,7 @@
       "beta": null,
       "eps": 11,
       "volume": 545111,
-      "averageVolume": 925840
+      "averageVolume": 919796
     },
     "VITL": {
       "peTTM": null,
@@ -848,29 +848,29 @@
       "beta": null,
       "eps": -0.05,
       "volume": 1171827,
-      "averageVolume": 1911082
+      "averageVolume": 1899349
     },
     "AER": {
-      "peTTM": 7.247666,
+      "peTTM": 7.2726827,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 158.81,
       "fiftyTwoWeekLow": 118.93,
       "divYield": 0.9934445999999999,
       "beta": null,
-      "eps": 20.35,
+      "eps": 20.28,
       "volume": 838387,
-      "averageVolume": 1094996
+      "averageVolume": 1090923
     },
     "AIR": {
-      "peTTM": 27.349077,
+      "peTTM": 27.922432,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 154,
       "fiftyTwoWeekLow": 73.05,
       "divYield": 0,
       "beta": null,
-      "eps": 4.87,
+      "eps": 4.77,
       "volume": 181736,
-      "averageVolume": 457629
+      "averageVolume": 453249
     },
     "LULU": {
       "peTTM": 9.314571,
@@ -881,7 +881,7 @@
       "beta": null,
       "eps": 12.97,
       "volume": 3900557,
-      "averageVolume": 3394685
+      "averageVolume": 3402869
     },
     "NKE": {
       "peTTM": 18.333332,
@@ -892,7 +892,7 @@
       "beta": null,
       "eps": 2.16,
       "volume": 28339979,
-      "averageVolume": 24788458
+      "averageVolume": 24845666
     },
     "HSY": {
       "peTTM": 24.76487,
@@ -903,18 +903,18 @@
       "beta": null,
       "eps": 7.23,
       "volume": 821326,
-      "averageVolume": 1824851
+      "averageVolume": 1808923
     },
     "UPS": {
-      "peTTM": 19.578068,
+      "peTTM": 19.65112,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 122.41,
       "fiftyTwoWeekLow": 82,
       "divYield": 6.2074184,
       "beta": null,
-      "eps": 5.38,
+      "eps": 5.36,
       "volume": 2342107,
-      "averageVolume": 5110993
+      "averageVolume": 5067063
     },
     "FTAI": {
       "peTTM": 43.52232,
@@ -925,7 +925,7 @@
       "beta": null,
       "eps": 4.48,
       "volume": 984484,
-      "averageVolume": 1324779
+      "averageVolume": 1319379
     },
     "NVO": {
       "peTTM": 11.289604,
@@ -936,7 +936,7 @@
       "beta": null,
       "eps": 4.04,
       "volume": 8487691,
-      "averageVolume": 12411377
+      "averageVolume": 12349226
     },
     "BABA": {
       "peTTM": 26.30531,
@@ -947,7 +947,7 @@
       "beta": null,
       "eps": 4.52,
       "volume": 9660747,
-      "averageVolume": 12790582
+      "averageVolume": 12741074
     },
     "UNH": {
       "peTTM": 25.384369,
@@ -958,7 +958,7 @@
       "beta": null,
       "eps": 15.48,
       "volume": 2453364,
-      "averageVolume": 5671985
+      "averageVolume": 5620930
     },
     "6634.TWO": {
       "peTTM": null,
