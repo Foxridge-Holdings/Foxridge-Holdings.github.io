@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T22:37:37.241Z",
+  "updatedAt": "2026-09-06T02:50:46.224Z",
   "quotes": {
     "BRK-B": {
       "c": 506.03,
@@ -126,7 +126,7 @@
       "fiftyTwoWeekLow": 297.5,
       "volume": 3751739,
       "averageVolume": 5983133,
-      "marketCap": 107688771584,
+      "marketCap": 107275575296,
       "peTTM": 24.639507,
       "eps": 13.01,
       "divYield": 0,
@@ -148,9 +148,9 @@
       "fiftyTwoWeekLow": 24.6,
       "volume": 4135088,
       "averageVolume": 5570163,
-      "marketCap": 11868574720,
-      "peTTM": 21.044054,
-      "eps": 2.27,
+      "marketCap": 11840870400,
+      "peTTM": 21.421524,
+      "eps": 2.23,
       "divYield": 0.007094163,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -170,7 +170,7 @@
       "fiftyTwoWeekLow": 29.16,
       "volume": 44948,
       "averageVolume": 158600,
-      "marketCap": 52891004928,
+      "marketCap": 52889288704,
       "peTTM": 15.629807,
       "eps": 2.08,
       "divYield": 0,
@@ -257,10 +257,10 @@
       "fiftyTwoWeekHigh": 154,
       "fiftyTwoWeekLow": 73.05,
       "volume": 194327,
-      "averageVolume": 449362,
+      "averageVolume": 445363,
       "marketCap": 5094353408,
-      "peTTM": 25.82449,
-      "eps": 4.9,
+      "peTTM": 26.037037,
+      "eps": 4.86,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -301,8 +301,8 @@
       "fiftyTwoWeekHigh": 76.97,
       "fiftyTwoWeekLow": 37.95,
       "volume": 20178773,
-      "averageVolume": 25030079,
-      "marketCap": 56966352896,
+      "averageVolume": 24959828,
+      "marketCap": 56866066432,
       "peTTM": 18.285715,
       "eps": 2.1,
       "divYield": 0.042042814,
@@ -367,7 +367,7 @@
       "fiftyTwoWeekHigh": 323.51,
       "fiftyTwoWeekLow": 149.5,
       "volume": 995546,
-      "averageVolume": 1375753,
+      "averageVolume": 1370584,
       "marketCap": 20159346688,
       "peTTM": 42.855896,
       "eps": 4.58,
@@ -390,7 +390,7 @@
       "fiftyTwoWeekLow": 35.12,
       "volume": 6119184,
       "averageVolume": 11980534,
-      "marketCap": 206019985408,
+      "marketCap": 205971079168,
       "peTTM": 11.449631,
       "eps": 4.07,
       "divYield": 0.24626395,
@@ -539,7 +539,7 @@
       "exchange": "NasdaqGS",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 107688771584,
+      "marketCap": 107275575296,
       "ipo": null,
       "ticker": null
     },
@@ -552,7 +552,7 @@
       "exchange": "NasdaqGS",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 11868574720,
+      "marketCap": 11840870400,
       "ipo": null,
       "ticker": null
     },
@@ -565,7 +565,7 @@
       "exchange": "OTC Markets OTCPK",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 52891004928,
+      "marketCap": 52889288704,
       "ipo": null,
       "ticker": null
     },
@@ -643,7 +643,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 56966352896,
+      "marketCap": 56866066432,
       "ipo": null,
       "ticker": null
     },
@@ -695,7 +695,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 206019985408,
+      "marketCap": 205971079168,
       "ipo": null,
       "ticker": null
     },
@@ -807,13 +807,13 @@
       "averageVolume": 5983133
     },
     "AMKR": {
-      "peTTM": 21.044054,
+      "peTTM": 21.421524,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 96.68,
       "fiftyTwoWeekLow": 24.6,
       "divYield": 0.7094163,
       "beta": null,
-      "eps": 2.27,
+      "eps": 2.23,
       "volume": 4135088,
       "averageVolume": 5570163
     },
@@ -862,15 +862,15 @@
       "averageVolume": 1101122
     },
     "AIR": {
-      "peTTM": 25.82449,
+      "peTTM": 26.037037,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 154,
       "fiftyTwoWeekLow": 73.05,
       "divYield": 0,
       "beta": null,
-      "eps": 4.9,
+      "eps": 4.86,
       "volume": 194327,
-      "averageVolume": 449362
+      "averageVolume": 445363
     },
     "LULU": {
       "peTTM": 8.280659,
@@ -892,7 +892,7 @@
       "beta": null,
       "eps": 2.1,
       "volume": 20178773,
-      "averageVolume": 25030079
+      "averageVolume": 24959828
     },
     "HSY": {
       "peTTM": 23.65437,
@@ -925,7 +925,7 @@
       "beta": null,
       "eps": 4.58,
       "volume": 995546,
-      "averageVolume": 1375753
+      "averageVolume": 1370584
     },
     "NVO": {
       "peTTM": 11.449631,
