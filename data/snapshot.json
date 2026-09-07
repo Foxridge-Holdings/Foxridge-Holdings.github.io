@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-07T14:45:27.545Z",
+  "updatedAt": "2026-09-07T18:58:44.134Z",
   "quotes": {
     "BRK-B": {
       "c": 506.03,
@@ -29,7 +29,7 @@
       "dp": -1.3944223,
       "o": 254.5,
       "h": 254.5,
-      "l": 247,
+      "l": 247.5,
       "pc": 251,
       "currency": "TWD",
       "name": "STL TECHNOLOGY CO LTD",
@@ -42,7 +42,7 @@
       "peTTM": 41.457287,
       "eps": 5.97,
       "divYield": 0.00996016,
-      "marketState": "POSTPOST",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "LWLG": {
@@ -126,7 +126,7 @@
       "fiftyTwoWeekLow": 297.5,
       "volume": 3807740,
       "averageVolume": 5983133,
-      "marketCap": 107688771584,
+      "marketCap": 107275575296,
       "peTTM": 24.639507,
       "eps": 13.01,
       "divYield": 0,
@@ -148,7 +148,7 @@
       "fiftyTwoWeekLow": 24.6,
       "volume": 4152094,
       "averageVolume": 5570163,
-      "marketCap": 11868574720,
+      "marketCap": 11840870400,
       "peTTM": 21.421524,
       "eps": 2.23,
       "divYield": 0.007094163,
@@ -170,7 +170,7 @@
       "fiftyTwoWeekLow": 29.16,
       "volume": 44948,
       "averageVolume": 158600,
-      "marketCap": 52891004928,
+      "marketCap": 52889288704,
       "peTTM": 15.629807,
       "eps": 2.08,
       "divYield": 0,
@@ -302,7 +302,7 @@
       "fiftyTwoWeekLow": 37.95,
       "volume": 20178773,
       "averageVolume": 24959828,
-      "marketCap": 56966352896,
+      "marketCap": 56866066432,
       "peTTM": 18.285715,
       "eps": 2.1,
       "divYield": 0.042042814,
@@ -390,7 +390,7 @@
       "fiftyTwoWeekLow": 35.12,
       "volume": 6119184,
       "averageVolume": 11980534,
-      "marketCap": 206019985408,
+      "marketCap": 205971079168,
       "peTTM": 11.449631,
       "eps": 4.07,
       "divYield": 0.24626395,
@@ -460,7 +460,7 @@
       "peTTM": null,
       "eps": -1.67,
       "divYield": 0,
-      "marketState": "POSTPOST",
+      "marketState": "PREPRE",
       "extendedLabel": null
     }
   },
@@ -539,7 +539,7 @@
       "exchange": "NasdaqGS",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 107688771584,
+      "marketCap": 107275575296,
       "ipo": null,
       "ticker": null
     },
@@ -552,7 +552,7 @@
       "exchange": "NasdaqGS",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 11868574720,
+      "marketCap": 11840870400,
       "ipo": null,
       "ticker": null
     },
@@ -565,7 +565,7 @@
       "exchange": "OTC Markets OTCPK",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 52891004928,
+      "marketCap": 52889288704,
       "ipo": null,
       "ticker": null
     },
@@ -643,7 +643,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 56966352896,
+      "marketCap": 56866066432,
       "ipo": null,
       "ticker": null
     },
@@ -695,7 +695,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 206019985408,
+      "marketCap": 205971079168,
       "ipo": null,
       "ticker": null
     },
@@ -974,6 +974,6 @@
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.03174805
+    "TWD": 0.03173193
   }
 }
