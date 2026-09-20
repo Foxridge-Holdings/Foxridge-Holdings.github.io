@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T03:18:54.392Z",
+  "updatedAt": "2026-09-20T10:35:13.222Z",
   "quotes": {
     "BRK-B": {
       "c": 509.77,
@@ -28,7 +28,7 @@
       "d": 4.5,
       "dp": 1.9313306,
       "o": 236,
-      "h": 245.5,
+      "h": 251.5,
       "l": 234,
       "pc": 233,
       "currency": "TWD",
@@ -36,7 +36,7 @@
       "exchange": "Taipei Exchange",
       "fiftyTwoWeekHigh": 288,
       "fiftyTwoWeekLow": 118,
-      "volume": 231686,
+      "volume": 317686,
       "averageVolume": 5492963,
       "marketCap": 15571867648,
       "peTTM": 39.649418,
@@ -126,7 +126,7 @@
       "fiftyTwoWeekLow": 297.5,
       "volume": 10918759,
       "averageVolume": 5891814,
-      "marketCap": 103092436992,
+      "marketCap": 103489527808,
       "peTTM": 23.696922,
       "eps": 13,
       "divYield": 0,
@@ -148,7 +148,7 @@
       "fiftyTwoWeekLow": 28.03,
       "volume": 5588447,
       "averageVolume": 5157020,
-      "marketCap": 12467987456,
+      "marketCap": 12497159168,
       "peTTM": 22.556053,
       "eps": 2.23,
       "divYield": 0.006944734,
@@ -302,7 +302,7 @@
       "fiftyTwoWeekLow": 35.5,
       "volume": 51520492,
       "averageVolume": 27112217,
-      "marketCap": 52586295296,
+      "marketCap": 52679036928,
       "peTTM": 16.909523,
       "eps": 2.1,
       "divYield": 0.04482948,
@@ -539,7 +539,7 @@
       "exchange": "NasdaqGS",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 103092436992,
+      "marketCap": 103489527808,
       "ipo": null,
       "ticker": null
     },
@@ -552,7 +552,7 @@
       "exchange": "NasdaqGS",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 12467987456,
+      "marketCap": 12497159168,
       "ipo": null,
       "ticker": null
     },
@@ -643,7 +643,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 52586295296,
+      "marketCap": 52679036928,
       "ipo": null,
       "ticker": null
     },
@@ -759,7 +759,7 @@
       "divYield": 1.0729614,
       "beta": null,
       "eps": 5.99,
-      "volume": 231686,
+      "volume": 317686,
       "averageVolume": 5492963
     },
     "LWLG": {
