@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T22:38:49.000Z",
+  "updatedAt": "2026-09-20T03:18:54.392Z",
   "quotes": {
     "BRK-B": {
       "c": 509.77,
@@ -28,15 +28,15 @@
       "d": 4.5,
       "dp": 1.9313306,
       "o": 236,
-      "h": 239.5,
-      "l": 234.5,
+      "h": 245.5,
+      "l": 234,
       "pc": 233,
       "currency": "TWD",
       "name": "STL TECHNOLOGY CO LTD",
       "exchange": "Taipei Exchange",
       "fiftyTwoWeekHigh": 288,
       "fiftyTwoWeekLow": 118,
-      "volume": 2278546,
+      "volume": 231686,
       "averageVolume": 5492963,
       "marketCap": 15571867648,
       "peTTM": 39.649418,
@@ -759,7 +759,7 @@
       "divYield": 1.0729614,
       "beta": null,
       "eps": 5.99,
-      "volume": 2278546,
+      "volume": 231686,
       "averageVolume": 5492963
     },
     "LWLG": {
