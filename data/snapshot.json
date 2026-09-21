@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T22:57:33.834Z",
+  "updatedAt": "2026-09-21T03:14:08.579Z",
   "quotes": {
     "BRK-B": {
       "c": 509.77,
@@ -24,25 +24,25 @@
       "extendedLabel": null
     },
     "4931.TWO": {
-      "c": 244,
-      "d": 11,
-      "dp": 4.72103,
-      "o": 236,
-      "h": 251.5,
-      "l": 234,
-      "pc": 233,
+      "c": 243,
+      "d": -1,
+      "dp": -0.40983605,
+      "o": 239,
+      "h": 246,
+      "l": 238,
+      "pc": 244,
       "currency": "TWD",
       "name": "STL TECHNOLOGY CO LTD",
       "exchange": "Taipei Exchange",
       "fiftyTwoWeekHigh": 288,
       "fiftyTwoWeekLow": 118,
-      "volume": 317686,
+      "volume": 3049710,
       "averageVolume": 5492963,
-      "marketCap": 15998045184,
-      "peTTM": 40.73456,
+      "marketCap": 15932479488,
+      "peTTM": 40.567616,
       "eps": 5.99,
-      "divYield": 0.010729614,
-      "marketState": "PREPRE",
+      "divYield": 0.0102459015,
+      "marketState": "REGULAR",
       "extendedLabel": null
     },
     "LWLG": {
@@ -126,7 +126,7 @@
       "fiftyTwoWeekLow": 297.5,
       "volume": 10960499,
       "averageVolume": 5891814,
-      "marketCap": 103092436992,
+      "marketCap": 103489527808,
       "peTTM": 23.696922,
       "eps": 13,
       "divYield": 0,
@@ -148,7 +148,7 @@
       "fiftyTwoWeekLow": 28.03,
       "volume": 5601418,
       "averageVolume": 5157020,
-      "marketCap": 12467987456,
+      "marketCap": 12497159168,
       "peTTM": 22.556053,
       "eps": 2.23,
       "divYield": 0.006944734,
@@ -302,7 +302,7 @@
       "fiftyTwoWeekLow": 35.5,
       "volume": 51520492,
       "averageVolume": 27112217,
-      "marketCap": 52586295296,
+      "marketCap": 52679036928,
       "peTTM": 16.909523,
       "eps": 2.1,
       "divYield": 0.04482948,
@@ -442,25 +442,25 @@
       "extendedLabel": null
     },
     "6634.TWO": {
-      "c": 56.8,
-      "d": -2.5,
-      "dp": -4.215852,
-      "o": 60.2,
+      "c": 60.2,
+      "d": 3.4000015,
+      "dp": 5.985918,
+      "o": 57,
       "h": 60.2,
-      "l": 56.2,
-      "pc": 59.3,
+      "l": 57,
+      "pc": 56.8,
       "currency": "TWD",
       "name": "SINEW",
       "exchange": "Taipei Exchange",
       "fiftyTwoWeekHigh": 85,
       "fiftyTwoWeekLow": 29.05,
-      "volume": 126603,
+      "volume": 70643,
       "averageVolume": 137672,
-      "marketCap": 4049211136,
+      "marketCap": 4291593472,
       "peTTM": null,
       "eps": -1.66,
       "divYield": 0,
-      "marketState": "PREPRE",
+      "marketState": "REGULAR",
       "extendedLabel": null
     }
   },
@@ -487,7 +487,7 @@
       "exchange": "Taipei Exchange",
       "weburl": null,
       "currency": "TWD",
-      "marketCap": 15998045184,
+      "marketCap": 15932479488,
       "ipo": null,
       "ticker": null
     },
@@ -539,7 +539,7 @@
       "exchange": "NasdaqGS",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 103092436992,
+      "marketCap": 103489527808,
       "ipo": null,
       "ticker": null
     },
@@ -552,7 +552,7 @@
       "exchange": "NasdaqGS",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 12467987456,
+      "marketCap": 12497159168,
       "ipo": null,
       "ticker": null
     },
@@ -643,7 +643,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 52586295296,
+      "marketCap": 52679036928,
       "ipo": null,
       "ticker": null
     },
@@ -734,7 +734,7 @@
       "exchange": "Taipei Exchange",
       "weburl": null,
       "currency": "TWD",
-      "marketCap": 4049211136,
+      "marketCap": 4291593472,
       "ipo": null,
       "ticker": null
     }
@@ -752,14 +752,14 @@
       "averageVolume": 4484500
     },
     "4931.TWO": {
-      "peTTM": 40.73456,
+      "peTTM": 40.567616,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 288,
       "fiftyTwoWeekLow": 118,
-      "divYield": 1.0729614,
+      "divYield": 1.0245901499999999,
       "beta": null,
       "eps": 5.99,
-      "volume": 317686,
+      "volume": 3049710,
       "averageVolume": 5492963
     },
     "LWLG": {
@@ -968,12 +968,12 @@
       "divYield": 0,
       "beta": null,
       "eps": -1.66,
-      "volume": 126603,
+      "volume": 70643,
       "averageVolume": 137672
     }
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031482182
+    "TWD": 0.031480197
   }
 }
