@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T20:50:53.984Z",
+  "updatedAt": "2026-09-27T23:37:21.252Z",
   "quotes": {
     "BRK-B": {
       "c": 505.48,
@@ -126,7 +126,7 @@
       "fiftyTwoWeekLow": 297.5,
       "volume": 3023743,
       "averageVolume": 5841411,
-      "marketCap": 104393203712,
+      "marketCap": 103992647680,
       "peTTM": 23.867126,
       "eps": 13.02,
       "divYield": 0,
@@ -148,7 +148,7 @@
       "fiftyTwoWeekLow": 28.03,
       "volume": 2564017,
       "averageVolume": 4909765,
-      "marketCap": 13319537664,
+      "marketCap": 13288445952,
       "peTTM": 24.04036,
       "eps": 2.23,
       "divYield": 0.0063199853,
@@ -302,7 +302,7 @@
       "fiftyTwoWeekLow": 35.2159,
       "volume": 38105838,
       "averageVolume": 27698885,
-      "marketCap": 53035081728,
+      "marketCap": 52941713408,
       "peTTM": 17.02381,
       "eps": 2.1,
       "divYield": 0.045290355,
@@ -539,7 +539,7 @@
       "exchange": "NasdaqGS",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 104393203712,
+      "marketCap": 103992647680,
       "ipo": null,
       "ticker": null
     },
@@ -552,7 +552,7 @@
       "exchange": "NasdaqGS",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 13319537664,
+      "marketCap": 13288445952,
       "ipo": null,
       "ticker": null
     },
@@ -643,7 +643,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 53035081728,
+      "marketCap": 52941713408,
       "ipo": null,
       "ticker": null
     },
@@ -974,6 +974,6 @@
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031491105
+    "TWD": 0.031468313
   }
 }
