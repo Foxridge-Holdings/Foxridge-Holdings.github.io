@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T11:45:24.141Z",
+  "updatedAt": "2026-10-04T16:24:57.136Z",
   "quotes": {
     "BRK-B": {
       "c": 502.65,
@@ -42,7 +42,7 @@
       "peTTM": 42.211056,
       "eps": 5.97,
       "divYield": 0.0100603625,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "LWLG": {
@@ -460,7 +460,7 @@
       "peTTM": null,
       "eps": -1.67,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     }
   },
