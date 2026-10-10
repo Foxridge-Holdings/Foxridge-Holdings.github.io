@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T11:52:40.656Z",
+  "updatedAt": "2026-10-10T16:56:09.468Z",
   "quotes": {
     "BRK-B": {
       "c": 515.62,
@@ -105,8 +105,8 @@
       "volume": 197833,
       "averageVolume": 189690,
       "marketCap": null,
-      "peTTM": 24.573713,
-      "eps": 0.16440332,
+      "peTTM": 20.014862,
+      "eps": 0.20185,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -126,7 +126,7 @@
       "fiftyTwoWeekLow": 266.84,
       "volume": 3282034,
       "averageVolume": 5894126,
-      "marketCap": 92711583744,
+      "marketCap": 93068689408,
       "peTTM": 21.29439,
       "eps": 13.01,
       "divYield": 0,
@@ -148,7 +148,7 @@
       "fiftyTwoWeekLow": 29.39,
       "volume": 4242726,
       "averageVolume": 4687610,
-      "marketCap": 12175497216,
+      "marketCap": 12203985920,
       "peTTM": 22.026905,
       "eps": 2.23,
       "divYield": 0.0065294118,
@@ -259,8 +259,8 @@
       "volume": 328698,
       "averageVolume": 506671,
       "marketCap": 4036704768,
-      "peTTM": 20.8361,
-      "eps": 4.82,
+      "peTTM": 20.579918,
+      "eps": 4.88,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -539,7 +539,7 @@
       "exchange": "NasdaqGS",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 92711583744,
+      "marketCap": 93068689408,
       "ipo": null,
       "ticker": null
     },
@@ -552,7 +552,7 @@
       "exchange": "NasdaqGS",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 12175497216,
+      "marketCap": 12203985920,
       "ipo": null,
       "ticker": null
     },
@@ -785,13 +785,13 @@
       "averageVolume": 83819001
     },
     "FLYT": {
-      "peTTM": 24.573713,
+      "peTTM": 20.014862,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 58.515,
       "fiftyTwoWeekLow": 3.606,
       "divYield": 0,
       "beta": null,
-      "eps": 0.16440332,
+      "eps": 0.20185,
       "volume": 197833,
       "averageVolume": 189690
     },
@@ -862,13 +862,13 @@
       "averageVolume": 1069226
     },
     "AIR": {
-      "peTTM": 20.8361,
+      "peTTM": 20.579918,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 154,
       "fiftyTwoWeekLow": 76.1,
       "divYield": 0,
       "beta": null,
-      "eps": 4.82,
+      "eps": 4.88,
       "volume": 328698,
       "averageVolume": 506671
     },
