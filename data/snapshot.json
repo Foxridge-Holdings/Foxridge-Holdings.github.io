@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T17:48:15.060Z",
+  "updatedAt": "2026-10-18T20:04:15.309Z",
   "quotes": {
     "BRK-B": {
       "c": 532.02,
@@ -126,7 +126,7 @@
       "fiftyTwoWeekLow": 260.59,
       "volume": 3514268,
       "averageVolume": 5696253,
-      "marketCap": 89060548608,
+      "marketCap": 89403588608,
       "peTTM": 20.455803,
       "eps": 13.01,
       "divYield": 0,
@@ -148,7 +148,7 @@
       "fiftyTwoWeekLow": 29.5,
       "volume": 2978228,
       "averageVolume": 4620814,
-      "marketCap": 10366028800,
+      "marketCap": 10390282240,
       "peTTM": 18.753363,
       "eps": 2.23,
       "divYield": 0.0075595914,
@@ -227,7 +227,7 @@
       "dp": -0.157618,
       "o": 145.92,
       "h": 147.79,
-      "l": 145.34,
+      "l": 145.355,
       "pc": 145.92,
       "currency": "USD",
       "name": "AerCap Holdings N.V.",
@@ -391,8 +391,8 @@
       "volume": 9457786,
       "averageVolume": 12835189,
       "marketCap": 171361075200,
-      "peTTM": 9.136471,
-      "eps": 4.25,
+      "peTTM": 9.493888,
+      "eps": 4.09,
       "divYield": 0.29831716,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -458,7 +458,7 @@
       "averageVolume": 98226,
       "marketCap": 4255949056,
       "peTTM": null,
-      "eps": -1.74,
+      "eps": -1.66,
       "divYield": 0,
       "marketState": "PREPRE",
       "extendedLabel": null
@@ -539,7 +539,7 @@
       "exchange": "NasdaqGS",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 89060548608,
+      "marketCap": 89403588608,
       "ipo": null,
       "ticker": null
     },
@@ -552,7 +552,7 @@
       "exchange": "NasdaqGS",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 10366028800,
+      "marketCap": 10390282240,
       "ipo": null,
       "ticker": null
     },
@@ -928,13 +928,13 @@
       "averageVolume": 1542229
     },
     "NVO": {
-      "peTTM": 9.136471,
+      "peTTM": 9.493888,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 64.16,
       "fiftyTwoWeekLow": 35.12,
       "divYield": 29.831716000000004,
       "beta": null,
-      "eps": 4.25,
+      "eps": 4.09,
       "volume": 9457786,
       "averageVolume": 12835189
     },
@@ -967,7 +967,7 @@
       "fiftyTwoWeekLow": 29.05,
       "divYield": 0,
       "beta": null,
-      "eps": -1.74,
+      "eps": -1.66,
       "volume": 56155,
       "averageVolume": 98226
     }
