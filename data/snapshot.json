@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T03:07:16.163Z",
+  "updatedAt": "2026-10-25T10:40:49.934Z",
   "quotes": {
     "BRK-B": {
       "c": 542.19,
@@ -36,7 +36,7 @@
       "exchange": "Taipei Exchange",
       "fiftyTwoWeekHigh": 288,
       "fiftyTwoWeekLow": 118,
-      "volume": 1644809,
+      "volume": 1660455,
       "averageVolume": 4685434,
       "marketCap": 13113151488,
       "peTTM": 33.444817,
@@ -759,7 +759,7 @@
       "divYield": 1.1737090000000001,
       "beta": null,
       "eps": 5.98,
-      "volume": 1644809,
+      "volume": 1660455,
       "averageVolume": 4685434
     },
     "LWLG": {
