@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T16:47:21.939Z",
+  "updatedAt": "2026-10-31T20:57:17.087Z",
   "quotes": {
     "BRK-B": {
       "c": 542.49,
@@ -126,7 +126,7 @@
       "fiftyTwoWeekLow": 225.19,
       "volume": 9119795,
       "averageVolume": 5160332,
-      "marketCap": 76762177536,
+      "marketCap": 76467642368,
       "peTTM": 17.563412,
       "eps": 13.01,
       "divYield": 0,
@@ -336,7 +336,7 @@
       "d": 0.919998,
       "dp": 0.857168,
       "o": 107.94,
-      "h": 109.08,
+      "h": 109.12,
       "l": 107.71,
       "pc": 107.33,
       "currency": "USD",
@@ -539,7 +539,7 @@
       "exchange": "NasdaqGS",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 76762177536,
+      "marketCap": 76467642368,
       "ipo": null,
       "ticker": null
     },
