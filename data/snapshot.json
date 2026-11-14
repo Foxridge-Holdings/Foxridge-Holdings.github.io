@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T12:56:23.426Z",
+  "updatedAt": "2026-11-14T19:40:59.737Z",
   "quotes": {
     "BRK-B": {
       "c": 592.94,
@@ -69,8 +69,8 @@
     },
     "NOK": {
       "c": 8.07,
-      "d": -0.21000004,
-      "dp": -2.5362325,
+      "d": -0.21,
+      "dp": -2.53623,
       "o": 8.2,
       "h": 8.23,
       "l": 7.92,
@@ -80,7 +80,7 @@
       "exchange": "NYSE",
       "fiftyTwoWeekHigh": 17.45,
       "fiftyTwoWeekLow": 5.86,
-      "volume": 50752419,
+      "volume": 50656340,
       "averageVolume": 76772751,
       "marketCap": 45667610624,
       "peTTM": 50.4375,
@@ -91,10 +91,10 @@
     },
     "FLYT": {
       "c": 5.23,
-      "d": -0.07999992,
-      "dp": -1.5065899,
+      "d": -0.0799999,
+      "dp": -1.50659,
       "o": 5.27,
-      "h": 5.5,
+      "h": 5.4192,
       "l": 4.42,
       "pc": 5.31,
       "currency": "USD",
@@ -102,7 +102,7 @@
       "exchange": "Cboe US",
       "fiftyTwoWeekHigh": 58.515,
       "fiftyTwoWeekLow": 1.91,
-      "volume": 302628,
+      "volume": 302635,
       "averageVolume": 198389,
       "marketCap": null,
       "peTTM": 46.11871,
@@ -216,7 +216,7 @@
       "averageVolume": 1709001,
       "marketCap": 389429568,
       "peTTM": null,
-      "eps": -0.57,
+      "eps": -0.56,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -289,8 +289,8 @@
     },
     "NKE": {
       "c": 37.99,
-      "d": 0.23000336,
-      "dp": 0.6091191,
+      "d": 0.230003,
+      "dp": 0.609119,
       "o": 37.9,
       "h": 38.325,
       "l": 37.635,
@@ -300,11 +300,11 @@
       "exchange": "NYSE",
       "fiftyTwoWeekHigh": 69.14,
       "fiftyTwoWeekLow": 31.97,
-      "volume": 12201890,
+      "volume": 12159235,
       "averageVolume": 32837779,
       "marketCap": 56426885120,
-      "peTTM": 18.177034,
-      "eps": 2.09,
+      "peTTM": 18.264425,
+      "eps": 2.08,
       "divYield": 0.043432206,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -312,7 +312,7 @@
     "HSY": {
       "c": 174.27,
       "d": 0.980011,
-      "dp": 0.5655324,
+      "dp": 0.565532,
       "o": 175.16,
       "h": 176.225,
       "l": 173.21,
@@ -322,7 +322,7 @@
       "exchange": "NYSE",
       "fiftyTwoWeekHigh": 239.48,
       "fiftyTwoWeekLow": 156.16,
-      "volume": 1480032,
+      "volume": 1480004,
       "averageVolume": 1553775,
       "marketCap": 35024850944,
       "peTTM": 19.7138,
@@ -333,8 +333,8 @@
     },
     "UPS": {
       "c": 112.4,
-      "d": 2.0200043,
-      "dp": 1.8300455,
+      "d": 2.02,
+      "dp": 1.83005,
       "o": 111.8,
       "h": 112.58,
       "l": 111.11,
@@ -344,7 +344,7 @@
       "exchange": "NYSE",
       "fiftyTwoWeekHigh": 122.41,
       "fiftyTwoWeekLow": 90.84,
-      "volume": 7624407,
+      "volume": 7609116,
       "averageVolume": 4834937,
       "marketCap": 95705161728,
       "peTTM": 21.657032,
@@ -377,8 +377,8 @@
     },
     "NVO": {
       "c": 41.63,
-      "d": 0.97999954,
-      "dp": 2.4108229,
+      "d": 0.98,
+      "dp": 2.41082,
       "o": 40.97,
       "h": 41.8,
       "l": 40.6395,
@@ -388,11 +388,11 @@
       "exchange": "NYSE",
       "fiftyTwoWeekHigh": 64.16,
       "fiftyTwoWeekLow": 35.12,
-      "volume": 11714401,
+      "volume": 11691685,
       "averageVolume": 12361665,
       "marketCap": 183519838208,
-      "peTTM": 10.253695,
-      "eps": 4.06,
+      "peTTM": 10.512627,
+      "eps": 3.96,
       "divYield": 0.28782287,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -421,18 +421,18 @@
     },
     "UNH": {
       "c": 407.46,
-      "d": 2.3299866,
-      "dp": 0.5751207,
+      "d": 2.32999,
+      "dp": 0.575121,
       "o": 407.89,
       "h": 408.51,
-      "l": 400.45,
+      "l": 400.5,
       "pc": 405.13,
       "currency": "USD",
       "name": "UnitedHealth Group Incorporated",
       "exchange": "NYSE",
       "fiftyTwoWeekHigh": 461.62,
       "fiftyTwoWeekLow": 255.97,
-      "volume": 3472017,
+      "volume": 3280454,
       "averageVolume": 5232287,
       "marketCap": 365093355520,
       "peTTM": 23.256847,
@@ -781,7 +781,7 @@
       "divYield": 1.6908212999999999,
       "beta": null,
       "eps": 0.16,
-      "volume": 50752419,
+      "volume": 50656340,
       "averageVolume": 76772751
     },
     "FLYT": {
@@ -792,7 +792,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 0.113403,
-      "volume": 302628,
+      "volume": 302635,
       "averageVolume": 198389
     },
     "APP": {
@@ -846,7 +846,7 @@
       "fiftyTwoWeekLow": 7.95,
       "divYield": 0,
       "beta": null,
-      "eps": -0.57,
+      "eps": -0.56,
       "volume": 1243948,
       "averageVolume": 1709001
     },
@@ -884,14 +884,14 @@
       "averageVolume": 5036679
     },
     "NKE": {
-      "peTTM": 18.177034,
+      "peTTM": 18.264425,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 69.14,
       "fiftyTwoWeekLow": 31.97,
       "divYield": 4.3432206,
       "beta": null,
-      "eps": 2.09,
-      "volume": 12201890,
+      "eps": 2.08,
+      "volume": 12159235,
       "averageVolume": 32837779
     },
     "HSY": {
@@ -902,7 +902,7 @@
       "divYield": 3.3042878,
       "beta": null,
       "eps": 8.84,
-      "volume": 1480032,
+      "volume": 1480004,
       "averageVolume": 1553775
     },
     "UPS": {
@@ -913,7 +913,7 @@
       "divYield": 5.9431057,
       "beta": null,
       "eps": 5.19,
-      "volume": 7624407,
+      "volume": 7609116,
       "averageVolume": 4834937
     },
     "FTAI": {
@@ -928,14 +928,14 @@
       "averageVolume": 1645975
     },
     "NVO": {
-      "peTTM": 10.253695,
+      "peTTM": 10.512627,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 64.16,
       "fiftyTwoWeekLow": 35.12,
       "divYield": 28.782287,
       "beta": null,
-      "eps": 4.06,
-      "volume": 11714401,
+      "eps": 3.96,
+      "volume": 11691685,
       "averageVolume": 12361665
     },
     "BABA": {
@@ -957,7 +957,7 @@
       "divYield": 2.2363193,
       "beta": null,
       "eps": 17.52,
-      "volume": 3472017,
+      "volume": 3280454,
       "averageVolume": 5232287
     },
     "6634.TWO": {
