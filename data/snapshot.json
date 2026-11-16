@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T18:27:25.656Z",
+  "updatedAt": "2026-11-16T00:43:36.389Z",
   "quotes": {
     "BRK-B": {
       "c": 592.94,
@@ -442,9 +442,9 @@
       "extendedLabel": null
     },
     "6634.TWO": {
-      "c": 61.9,
-      "d": 1.6000023,
-      "dp": 2.6534035,
+      "c": 59.9,
+      "d": -0.3999977,
+      "dp": -0.6633462,
       "o": 60.4,
       "h": 60.4,
       "l": 58.8,
@@ -456,7 +456,7 @@
       "fiftyTwoWeekLow": 29.05,
       "volume": 42605,
       "averageVolume": 97855,
-      "marketCap": 4412556800,
+      "marketCap": 4269986560,
       "peTTM": null,
       "eps": -1.66,
       "divYield": 0,
@@ -734,7 +734,7 @@
       "exchange": "Taipei Exchange",
       "weburl": null,
       "currency": "TWD",
-      "marketCap": 4412556800,
+      "marketCap": 4269986560,
       "ipo": null,
       "ticker": null
     }
@@ -974,6 +974,6 @@
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.030396985
+    "TWD": 0.030425655
   }
 }
